@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="flag1">#029acc</color>
+    <color name="flag2">#9acc34</color>
+    <color name="flag3">#ffe515</color>
+
+</resources>
