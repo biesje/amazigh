@@ -35,7 +35,6 @@ public class oefenen extends FragmentActivity {
                 case 0: return ContentOefen.newInstance("Paard");
                 case 1: return ContentOefen.newInstance("Ezel");
                 case 2: return ContentOefen.newInstance("Koe");
-                case 3: return ContentOefen.newInstance("Koe");
 
 
                 default: return ContentOefen.newInstance("ThirdFragment, Default");
