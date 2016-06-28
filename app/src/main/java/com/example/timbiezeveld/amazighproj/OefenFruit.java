@@ -1,13 +1,20 @@
 package com.example.timbiezeveld.amazighproj;
 
 import android.app.Activity;
+import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.timbiezeveld.amazighproj.R;
 
 public class OefenFruit extends Activity
+
 {
     float x1,x2;
     float y1, y2;
@@ -30,8 +37,8 @@ public class OefenFruit extends Activity
     };
 
     private int[] photos = {
-          R.drawable.dieren01_egel,R.drawable.dieren01_ezel, R.drawable.dieren01_geit,R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
-            R.drawable.dieren01_kikker, R.drawable.dieren01_kip, R.drawable.dieren01_koe, R.drawable.dieren01_konijn, R.drawable.dieren01_muis, R.drawable.dieren01_paard, R.drawable.dieren01_schaap, R.drawable.dieren01_vis, R.drawable.dieren01_vogel
+        R.drawable.fruit_appel, R.drawable.fruit_peer, R.drawable.fruit_abrikoos, R.drawable.fruit_perzik, R.drawable.fruit_druiven, R.drawable.fruit_watermeloen, R.drawable.fruit_honingmeloen,
+            R.drawable.fruit_granaatappel, R.drawable.fruit_vijg,
     };
 
     private int[] geluid = {

@@ -50,7 +50,7 @@
                 android:layout_height="fill_parent"
                 android:layout_column="0"
                 android:background="#cc0033"
-                android:onClick="RedirectOefenFruit"
+                android:onClick="oefenFruit"
                 android:text="Fruit" />
         </TableRow>
 
@@ -110,11 +110,10 @@
 
             <Button
                 android:id="@+id/button18"
-                style="?android:attr/buttonStyleSmall"
                 android:layout_height="fill_parent"
                 android:layout_column="0"
                 android:background="#99cc33"
-                android:onClick="RedirectOefenEten"
+                android:onClick="startEten"
                 android:text="eten" />
         </TableRow>
 

@@ -33,14 +33,14 @@ public class OefenEten extends Activity
     };
 
     private int[] photos = {
- R.drawableable.eten_eieren, R.drawableable.eten_olie,
-            R.drawableable.eten_koekjes, R.drawableable.eten_thee,
-            R.drawableable.eten_koffie, R.drawableable.eten_melk,
-            R.drawableable.eten_yoghurt, R.drawableable.eten_water,
-            R.drawableable.eten_brood, R.drawableable.eten_honing,
-            R.drawableable.eten_suiker, R.drawableable.eten_zout,
-            R.drawableable.eten_vlees, R.drawableable.eten_vissen,
-            R.drawableable.eten_boter    };
+ R.drawable.eten_eieren, R.drawable.eten_olie,
+            R.drawable.eten_koekjes, R.drawable.eten_thee,
+            R.drawable.eten_koffie, R.drawable.eten_melk,
+            R.drawable.eten_yoghurt, R.drawable.eten_water,
+            R.drawable.eten_brood, R.drawable.eten_honing,
+            R.drawable.eten_suiker, R.drawable.eten_zout,
+            R.drawable.eten_vlees, R.drawable.eten_vissen,
+            R.drawable.eten_boter    };
 
     private int[] geluid = {
  R.raw.eten_eieren, R.raw.eten_olie,
@@ -91,7 +91,7 @@ public class OefenEten extends Activity
                              }
                              //Set layout
                          }
-                    setItems();
+                  //  setItems();
 
 
                     break;
