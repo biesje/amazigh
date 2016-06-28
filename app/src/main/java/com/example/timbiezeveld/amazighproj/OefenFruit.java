@@ -1,19 +1,13 @@
 package com.example.timbiezeveld.amazighproj;
 
 import android.app.Activity;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.example.timbiezeveld.amazighproj.R;
-
-public class OefenDieren1 extends Activity
+public class OefenFruit extends Activity
 {
     float x1,x2;
     float y1, y2;
