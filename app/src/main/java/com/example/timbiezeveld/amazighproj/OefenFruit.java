@@ -14,19 +14,19 @@ public class OefenFruit extends Activity
     int arrayNum;
     int aantalWoorden;
     private String[] woorden = {
-            "Egel", "Ezel", "Geit",
-            "Hond","Jakhals","Kat",
-            "Kikker", "Kip", "Koe",
-            "Konijn", "Muis", "Paard",
-            "Schaap", "Vis", "Vogel"
+           "appel", "peer", "abrikoos",
+            "perzik","druiven","watermeloen",
+            "honingmeloen", "granaatappel", "vijg",
+            "cactusvijg", "pruim", "sinaasappel",
+            "dadel", "citroen", "bananen"
     };
 
     private String[] vertaling = {
-            "Insi", "Aɣyul", "Tɣaṭṭ",
-            "Ayḍi","Uccen","Mucc",
-            "Aqaqriw", "Tyaziḍt", "Tafunast",
-            "Aqninni", "Aɣerda", "Ayis",
-            "Icerri", "Aslem", "Agḍiḍ"
+                 "tateffaht", "tafirast", "rmecmac",
+            "rxux","aḍil","ddellaɛ",
+            "abettix", "arremman", "tazart",
+            "tahendict", "rbarquq", "taleccint",
+            "tini", "llaymun", "banan"
     };
 
     private int[] photos = {
