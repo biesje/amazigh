@@ -15,19 +15,21 @@ public class OefenDieren2 extends Activity
     int arrayNum;
     int aantalWoorden;
     private String[] woorden = {
-            "Egel", "Ezel", "Geit",
-            "Hond","Jakhals","Kat",
-            "Kikker", "Kip", "Koe",
-            "Konijn", "Muis", "Paard",
-            "Schaap", "Vis", "Vogel"
+                      "Duif", "Gekko", "Haas",
+            "Hyena","Kameleon","Patrijs",
+            "Schildpad", "Schorpioen", "Slang",
+            "Stekelvarken", "Uil", "Vos",
+            "Wilfzwijn", "Windhond", "Zwaluw"
+
     };
 
     private String[] vertaling = {
-            "Insi", "Aɣyul", "Tɣaṭṭ",
-            "Ayḍi","Uccen","Mucc",
-            "Aqaqriw", "Tyaziḍt", "Tafunast",
-            "Aqninni", "Aɣerda", "Ayis",
-            "Icerri", "Aslem", "Agḍiḍ"
+                       "Duif", "Gekko", "Haas",
+            "Hyena","Kameleon","Patrijs",
+            "Schildpad", "Schorpioen", "Slang",
+            "Stekelvarken", "Uil", "Vos",
+            "Wilfzwijn", "Windhond", "Zwaluw"
+
     };
 
     private int[] photos = {
