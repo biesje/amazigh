@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void startOefen(View v){
 
-        Intent intent = new Intent(MainActivity.this,oefenen.class);
+        Intent intent = new Intent(MainActivity.this,Catogory.class);
 
         startActivity(intent);
 

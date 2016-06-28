@@ -1,36 +1,26 @@
 package com.example.timbiezeveld.amazighproj;
 
-
-import android.app.ListActivity;
+import android.content.Intent;
+import android.graphics.Color;
+import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
+import android.view.View;
 
-public class Catogory extends ListActivity {
-
-    String[] itemname ={
-            "Dieren 1",
-            "Fruit",
-            "Insecten",
-            "Groente",
-            "Dieren 2",
-            "Eten",
-            "Kleding",
-            "Weer",
-            "Kleuren"
-    };
+public class Catogory extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_catogory);
 
-        this.setListAdapter(new ArrayAdapter<String>(
-                this, R.layout.mylist,
-                R.id.Itemname,itemname));
     }
 
+    public void startDieren1(View v){
 
+        Intent intent = new Intent(Catogory.this,OefenDieren1.class);
+        startActivity(intent);
+
+
+    }
 
 }
-

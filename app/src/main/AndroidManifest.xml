@@ -29,7 +29,8 @@
         <activity
             android:name=".oefenen"
             android:label="@string/title_activity_oefenen"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".OefenDieren1"></activity>
     </application>
 
 </manifest>
