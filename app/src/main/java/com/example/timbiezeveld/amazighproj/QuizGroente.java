@@ -16,7 +16,6 @@ import java.util.Random;
 
 public class QuizGroente extends AppCompatActivity {
 
-    private static int[] photomix;
     private String[] vertaling = {
         "rḥimez", "leɛdes", "llubeyyet",
             "ttumatic","zzitun","baṭaṭa",
@@ -24,6 +23,16 @@ public class QuizGroente extends AppCompatActivity {
             "rferfer", "taxsact", "xizzu",
 "tinifin", "ibawen", "ṭebi"
     };
+
+    private int[] photomix = {
+            R.drawable.groente_kikkererwten, R.drawable.groente_linzen,
+            R.drawable.groente_bonen, R.drawable.groente_tomaat,
+            R.drawable.groente_olijven, R.drawable.groente_aardappel,
+            R.drawable.groente_ui, R.drawable.groente_knoflook,
+            R.drawable.groente_mais, R.drawable.groente_paprika,
+            R.drawable.groente_pompoen, R.drawable.groente_wortel,
+            R.drawable.groente_doperwten, R.drawable.groente_tuinbonen,
+            R.drawable.groente_spinazie    };
 
     private int[] photos = {
  R.drawable.groente_kikkererwten, R.drawable.groente_linzen,
@@ -86,10 +95,10 @@ R.raw.groente_spinazie    };
         setScore(2, false);
         if(quiznum<vertaling.length-1) {
             aantalfout = 0;
-            loadImg();
 
             quiznum++;
             antPosition();
+            loadImg();
 
             TextView amw = (TextView) findViewById(R.id.amazighwoord); // amazich woor afgekoort met amw
 
@@ -236,7 +245,6 @@ R.raw.groente_spinazie    };
             array[randomPosition] = temp;
         }
 
-        photomix= array;
     }
     public void setScore(int score, boolean aanpas){
 
