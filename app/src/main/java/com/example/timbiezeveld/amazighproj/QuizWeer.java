@@ -1,29 +1,32 @@
 package com.example.timbiezeveld.amazighproj;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 public class QuizWeer extends AppCompatActivity {
+    ArrayList<Integer> list = new ArrayList<Integer>();
+    ArrayList<Integer> mixlist = new ArrayList<Integer>();
 
-    private static int[] photomix;
-    private String[] vertaling = {
-            "tafsut", "anebdu", "leiglief",
-            "tajarst","anẓar","adfel",
-            "asemmiḍ taslit n", "unzar", "yur",
-            "tfuct", "taziri", "ajjaj",
-            "itri", "tayyut", "asinu"
-    };
 
     private int[] photos = {
             R.drawable.weer_lente, R.drawable.weer_zomer,
@@ -36,6 +39,14 @@ public class QuizWeer extends AppCompatActivity {
             R.drawable.weer_wolken
     };
 
+
+    private String[] vertaling = {
+            "tafsut", "anebdu", "leiglief",
+            "tajarst","anẓar","adfel",
+            "asemmiḍ taslit n", "unzar", "yur",
+            "tfuct", "taziri", "ajjaj",
+            "itri", "tayyut", "asinu"
+    };
     private int[] geluid = {
             R.raw.weer_lente, R.raw.weer_zomer,
             R.raw.weer_herfst, R.raw.weer_winter,
@@ -47,6 +58,7 @@ public class QuizWeer extends AppCompatActivity {
             R.raw.weer_wolken
     };
 
+
     int quiznum;
     int aantalfout;
     int score;
@@ -55,27 +67,25 @@ public class QuizWeer extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        antPosition();
+        addTarr();
+
         quiznum = 0;
         score = 0;
+
+
+        antPosition();
+
+        loadImg();
         TextView amw = (TextView) findViewById(R.id.amazighwoord); // amazich woor afgekoort met amw
 
 
         amw.setText(vertaling[quiznum]);
-        loadImg();
-
-
-
-
-
-
-
 
 
     }
 
-    public void antPosition(){
-        int[] layouts = new int[] {R.layout.activity_quiz, R.layout.activity_quiz1,R.layout.activity_quiz2,R.layout.activity_quiz3,R.layout.activity_quiz4,R.layout.activity_quiz5,R.layout.activity_quiz6,};
+    public void antPosition() {
+        int[] layouts = new int[]{R.layout.activity_quiz, R.layout.activity_quiz1, R.layout.activity_quiz2, R.layout.activity_quiz3, R.layout.activity_quiz4, R.layout.activity_quiz5, R.layout.activity_quiz6,};
 
         setContentView(layouts[new Random().nextInt(layouts.length)]);
         setScore(0, true);
@@ -84,12 +94,37 @@ public class QuizWeer extends AppCompatActivity {
 
     }
 
-    public void goedAntwoord(){
+    public void addTarr() {
+        list.clear();
+        list.add(R.drawable.weer_lente);
+        list.add(R.drawable.weer_zomer);//
+        list.add(R.drawable.weer_herfst);
+        list.add(R.drawable.weer_winter);
+        list.add(R.drawable.weer_regen);
+        list.add(R.drawable.weer_sneeuw);
+        list.add(R.drawable.weer_wind);
+        list.add(R.drawable.weer_regenboog);
+        list.add(R.drawable.weer_maan);
+        list.add(R.drawable.weer_zon);
+        list.add(R.drawable.weer_halvemaan);
+        list.add(R.drawable.weer_donder);
+        list.add(R.drawable.weer_ster);
+        list.add(R.drawable.weer_mist);
+        list.add(R.drawable.weer_wolken);
+        list.remove(quiznum);
+
+    }
+
+    public void goedAntwoord() {
         setScore(2, false);
-        if(quiznum<vertaling.length-1) {
+        if (quiznum < vertaling.length - 1) {
             aantalfout = 0;
+
             quiznum++;
+            addTarr();
+
             antPosition();
+            loadImg();
 
             TextView amw = (TextView) findViewById(R.id.amazighwoord); // amazich woor afgekoort met amw
 
@@ -97,10 +132,8 @@ public class QuizWeer extends AppCompatActivity {
             amw.setText(vertaling[quiznum]);
 
 
-            loadImg();
-        }
-        else{
-            Intent intent = new Intent(QuizWeer.this,klaar.class);
+        } else {
+            Intent intent = new Intent(QuizWeer.this, klaar.class);
             intent.putExtra("extra_text", String.valueOf(this.score));
 
             startActivity(intent);
@@ -111,7 +144,7 @@ public class QuizWeer extends AppCompatActivity {
     }
 
 
-    public void setFout(int i, String k){
+    public void setFout(int i, String k) {
         switch (i) {
             case 1:
                 Button btn1 = (Button) findViewById(R.id.photo1); // amazich woor afgekoort met amw
@@ -138,21 +171,19 @@ public class QuizWeer extends AppCompatActivity {
                 break;
             case 6:
                 Button btn6 = (Button) findViewById(R.id.photo6); // amazich woor afgekoort met amw
-                shuffle();
                 btn6.setBackgroundResource(R.drawable.kruis);
 
 
+        }
+    }
 
-
-        }}
-
-    public void foutAntwoord(int i){
-        setFout(i,"#FF0000" );
+    public void foutAntwoord(int i) {
+        setFout(i, "#FF0000");
         setScore(-1, false);
     }
 
 
-    public void clickAntwoord(View v){
+    public void clickAntwoord(View v) {
         switch (v.getId()) {
             case R.id.photo1:
 
@@ -178,9 +209,9 @@ public class QuizWeer extends AppCompatActivity {
         aantalfout++;
 
 
-
     }
-    public void loadImg(){
+
+    public void loadImg() {
         Random rand = new Random();
 
         int n2;
@@ -191,10 +222,9 @@ public class QuizWeer extends AppCompatActivity {
         int n6;
 
 
-
         n2 = 1;
 
-        n3 =  2;
+        n3 = 2;
         n4 = 3;
 
         n5 = 4;
@@ -202,83 +232,36 @@ public class QuizWeer extends AppCompatActivity {
         n6 = 5;
 
 
-        RandomizeArray(photomix);
         Button btn1 = (Button) findViewById(R.id.photo1); // amazich woor afgekoort met amw
         btn1.setBackgroundResource(photos[quiznum]);
 
         Button btn2 = (Button) findViewById(R.id.photo2); // amazich woor afgekoort met amw
-        btn2.setBackgroundResource(photomix[2]);
+        btn2.setBackgroundResource(list.get(1));
         Button btn3 = (Button) findViewById(R.id.photo3); // amazich woor afgekoort met amw
-        btn3.setBackgroundResource(photomix[3]);
+        btn3.setBackgroundResource(list.get(4));
         Button btn4 = (Button) findViewById(R.id.photo4); // amazich woor afgekoort met amw
-        btn4.setBackgroundResource(photomix[5]);
+        btn4.setBackgroundResource(list.get(7));
         Button btn5 = (Button) findViewById(R.id.photo5); // amazich woor afgekoort met amw
-        btn5.setBackgroundResource(photomix[6]);
+        btn5.setBackgroundResource(list.get(5));
         Button btn6 = (Button) findViewById(R.id.photo6); // amazich woor afgekoort met amw
-        btn6.setBackgroundResource(photomix[7]);
+        btn6.setBackgroundResource(list.get(9));
     }
 
 
+    public void setScore(int score, boolean aanpas) {
 
-
-
-
-
-    public static void RandomizeArray(int[] array){
-        Random rgen = new Random();  // Random number generator
-
-        if(array[1]==1){
-
-        }
-
-        for (int i=0; i<array.length; i++) {
-            int randomPosition = rgen.nextInt(array.length);
-            int temp = array[i];
-
-            array[i] = array[randomPosition];
-            array[randomPosition] = temp;
-        }
-
-        photomix= array;
-    }
-    public void setScore(int score, boolean aanpas){
-
-        this.score=this.score+score;
+        this.score = this.score + score;
         TextView txt = (TextView) findViewById(R.id.score); // score view
-        if(aanpas) {
+        if (aanpas) {
 
             txt.setText("Score: " + String.valueOf(this.score));
         }
     }
 
-    public void shuffle(){
-        List<Integer> objects = new ArrayList<Integer>();
-        objects.add(0);
-        objects.add(1);
-        objects.add(2);
-        objects.add(3);
-        objects.add(4);
-
-        // Shuffle the collection
-        Collections.shuffle(objects);
-
-        List<Button> buttons = new ArrayList<Button>();
-        buttons.add((Button)findViewById(R.id.photo1));
-        buttons.add((Button)findViewById(R.id.photo2));
-        buttons.add((Button)findViewById(R.id.photo4));
-        buttons.add((Button)findViewById(R.id.photo5));
-        buttons.add((Button)findViewById(R.id.photo6));
-
-        for (int i = 0; i < objects.size(); i++) {
-            buttons.get(i).setText(objects.get(i).toString());
-        }
-
-
-
-    }
-
-
 
 }
+
+
+
 
 
