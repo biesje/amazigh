@@ -1,7 +1,9 @@
 package com.example.timbiezeveld.amazighproj;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class klaar extends AppCompatActivity {
@@ -16,6 +18,12 @@ public class klaar extends AppCompatActivity {
        TextView score = (TextView) findViewById(R.id.textView2); //
         score.setText(text);
 
+
+    }
+
+    public void terug(View v){
+            Intent intent = new Intent(this, CatogoryQuiz.class);
+        startActivity(intent);
 
     }
 

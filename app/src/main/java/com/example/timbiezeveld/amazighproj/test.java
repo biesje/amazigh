@@ -1,5 +1,6 @@
 package com.example.timbiezeveld.amazighproj;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -36,11 +37,6 @@ public class test extends AppCompatActivity {
     }
 
 
-    public void clickEffect(View v){
 
-        RelativeLayout btn5 = (RelativeLayout) findViewById(R.id.lay);
-        btn5.setBackgroundResource(list.get(2));
-
-    }
 
 }
