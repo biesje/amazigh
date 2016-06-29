@@ -27,7 +27,8 @@
                 android:text="hey"
                 android:textSize="0sp"
                 android:nestedScrollingEnabled="false"
-                android:onClick="clickAntwoord" />
+                android:onClick="clickAntwoord"
+                />
 
             <Button
                 android:id="@+id/photo2"
@@ -91,8 +92,8 @@
                 android:layout_weight="1"
                 android:text="Button"
                 android:textSize="0sp"
-                android:onClick="clickAntwoord"
-                android:nestedScrollingEnabled="false" />
+                android:onClick="clickButton"
+                android:nestedScrollingEnabled="true" />
         </TableRow>
 
         <TableRow
