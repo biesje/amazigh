@@ -29,27 +29,16 @@
             android:name=".oefenen"
             android:label="@string/title_activity_oefenen"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".OefenDieren1"></activity>
-        <activity android:name=".OefenDieren2"></activity>
-        <activity android:name=".OefenFood"></activity>
-        <activity android:name=".OefenFruit"></activity>
-        <activity android:name=".OefenGroente"></activity>
-        <activity android:name=".OefenInsecten"></activity>
-        <activity android:name=".OefenKleding"></activity>
-        <activity android:name=".OefenKleur"></activity>
-        <activity android:name=".OefenWeer"></activity>
-
-
-
-
-
-
-
-
-        <activity
-            android:name=".OefenFruit" />
-        <activity android:name=".OefenWeer"></activity>
-
+        <activity android:name=".OefenDieren1" />
+        <activity android:name=".OefenDieren2" />
+        <activity android:name=".OefenFood" />
+        <activity android:name=".OefenFruit" />
+        <activity android:name=".OefenGroente" />
+        <activity android:name=".OefenInsecten" />
+        <activity android:name=".OefenKleding" />
+        <activity android:name=".OefenKleur" />
+        <activity android:name=".OefenWeer" />
+        <activity android:name=".QuizDieren1"></activity>
     </application>
 
 </manifest>

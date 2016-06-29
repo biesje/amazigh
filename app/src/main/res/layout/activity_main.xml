@@ -22,7 +22,7 @@
         android:height="125dp"
         android:textSize="40dp"
         android:nestedScrollingEnabled="true"
-        android:onClick="openCatogory" />
+        android:onClick="startQuiz" />
 
     <Button
         android:layout_width="wrap_content"
