@@ -25,6 +25,8 @@
             android:name=".Catogory"
             android:label="@string/title_activity_swipe"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".CatogoryQuiz" />
+
         <activity
             android:name=".oefenen"
             android:label="@string/title_activity_oefenen"
@@ -39,23 +41,21 @@
         <activity android:name=".OefenKleur" />
         <activity android:name=".OefenWeer" />
         <activity android:name=".QuizDieren1" />
-        <activity android:name=".klaar">
+        <activity android:name=".klaar"/>
             <activity android:name=".QuizDieren2" />
-            <activity android:name=".QuizFood" />
+            <activity android:name=".QuizEten" />
             <activity android:name=".QuizFruit" />
             <activity android:name=".QuizGroente" />
             <activity android:name=".QuizInsecten" />
             <activity android:name=".QuizKleding" />
             <activity android:name=".QuizKleur" />
             <activity android:name=".QuizWeer" />
-            <activity android:name=".CatogoryQuiz" />
 
 
 
 
 
 
-        </activity>
     </application>
 
 </manifest>

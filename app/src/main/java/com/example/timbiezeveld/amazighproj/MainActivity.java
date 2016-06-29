@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void startQuiz(View v){
 
-        Intent intent = new Intent(MainActivity.this,QuizDieren1.class);
+        Intent intent = new Intent(MainActivity.this,CatogoryQuiz.class);
 
         startActivity(intent);
 

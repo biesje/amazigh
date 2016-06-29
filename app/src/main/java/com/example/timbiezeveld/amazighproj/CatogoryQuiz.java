@@ -16,7 +16,7 @@ public class CatogoryQuiz extends AppCompatActivity {
 
     public void startDieren1(View v){
 
-        Intent intent1 = new Intent(CatogoryQuiz.this,OefenDieren1.class);
+        Intent intent1 = new Intent(CatogoryQuiz.this,QuizDieren1.class);
         startActivity(intent1);
 
 
