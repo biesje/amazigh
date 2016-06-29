@@ -170,7 +170,7 @@ list.clear();
 
                 break;
             case 3:
-                Button btn3 = (Button) findViewById(R.id.photo2); // amazich woor afgekoort met amw
+                Button btn3 = (Button) findViewById(R.id.photo3); // amazich woor afgekoort met amw
 
                 btn3.setBackgroundResource(R.drawable.kruis);
                 break;
@@ -253,15 +253,15 @@ list.clear();
         btn1.setBackgroundResource(photos[quiznum]);
 
         Button btn2 = (Button) findViewById(R.id.photo2); // amazich woor afgekoort met amw
-        btn2.setBackgroundResource(list.get(0));
+        btn2.setBackgroundResource(list.get(1));
         Button btn3 = (Button) findViewById(R.id.photo3); // amazich woor afgekoort met amw
-        btn3.setBackgroundResource(list.get(1));
+        btn3.setBackgroundResource(list.get(4));
         Button btn4 = (Button) findViewById(R.id.photo4); // amazich woor afgekoort met amw
-        btn4.setBackgroundResource(list.get(2));
+        btn4.setBackgroundResource(list.get(7));
         Button btn5 = (Button) findViewById(R.id.photo5); // amazich woor afgekoort met amw
-        btn5.setBackgroundResource(list.get(3));
+        btn5.setBackgroundResource(list.get(5));
         Button btn6 = (Button) findViewById(R.id.photo6); // amazich woor afgekoort met amw
-        btn6.setBackgroundResource(list.get(4));
+        btn6.setBackgroundResource(list.get(9));
     }
 
 
