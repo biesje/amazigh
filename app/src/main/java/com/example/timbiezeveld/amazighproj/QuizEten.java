@@ -2,6 +2,7 @@ package com.example.timbiezeveld.amazighproj;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -63,7 +64,8 @@ public class QuizEten extends AppCompatActivity {
         quiznum = 0;
         score = 0;
         TextView amw = (TextView) findViewById(R.id.amazighwoord); // amazich woor afgekoort met amw
-
+        final MediaPlayer mp = MediaPlayer.create(this, geluid[quiznum]);
+        mp.start();
 
         amw.setText(vertaling[quiznum]);
         loadImg();
@@ -83,7 +85,8 @@ public class QuizEten extends AppCompatActivity {
 
         setContentView(layouts[new Random().nextInt(layouts.length)]);
         setScore(0, true);
-
+        final MediaPlayer mp = MediaPlayer.create(this, geluid[quiznum]);
+        mp.start();
 
     }
 
