@@ -55,15 +55,6 @@ public class QuizDieren1 extends AppCompatActivity {
         amw.setText(vertaling[quiznum]);
         loadImg();
 
-        ArrayList<Integer> numbers = new ArrayList<Integer>();
-        Random randomGenerator = new Random();
-        while (numbers.size() < 4) {
-
-            int random = randomGenerator .nextInt(4);
-            if (!numbers.contains(random)) {
-                numbers.add(random);
-            }
-        }
 
 
 
@@ -78,11 +69,13 @@ public class QuizDieren1 extends AppCompatActivity {
         int[] layouts = new int[] {R.layout.activity_quiz, R.layout.activity_quiz1,R.layout.activity_quiz2,R.layout.activity_quiz3,R.layout.activity_quiz4,R.layout.activity_quiz5,R.layout.activity_quiz6,};
 
         setContentView(layouts[new Random().nextInt(layouts.length)]);
+        setScore(0, true);
+
 
     }
 
     public void goedAntwoord(){
-        setScore(1);
+        setScore(2, false);
         if(quiznum<vertaling.length-1) {
             aantalfout = 0;
             antPosition();
@@ -145,7 +138,7 @@ public class QuizDieren1 extends AppCompatActivity {
 
     public void foutAntwoord(int i){
         setFout(i,"#FF0000" );
-        setScore(-1);
+        setScore(-1, false);
     }
 
 
@@ -236,12 +229,14 @@ RandomizeArray(photos);
 
         photomix= array;
     }
-    public void setScore(int score){
+    public void setScore(int score, boolean aanpas){
 
         this.score=this.score+score;
         TextView txt = (TextView) findViewById(R.id.score); // score view
+        if(aanpas) {
 
-        txt.setText("Score: "+String.valueOf(this.score));
+            txt.setText("Score: " + String.valueOf(this.score));
+        }
     }
 
     public void shuffle(){
