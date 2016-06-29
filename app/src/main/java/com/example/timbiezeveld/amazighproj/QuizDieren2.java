@@ -17,16 +17,23 @@ public class QuizDieren2 extends AppCompatActivity {
 
     private static int[] photomix;
     private int[] photos = {
-            R.drawable.dieren01_egel,R.drawable.dieren01_ezel, R.drawable.dieren01_geit,R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
-            R.drawable.dieren01_kikker, R.drawable.dieren01_kip, R.drawable.dieren01_koe, R.drawable.dieren01_konijn, R.drawable.dieren01_muis, R.drawable.dieren01_paard, R.drawable.dieren01_schaap, R.drawable.dieren01_vis, R.drawable.dieren01_vogel
+            R.drawable.dieren02_duif, R.drawable.dieren02_gekko,
+            R.drawable.dieren02_haas, R.drawable.dieren02_hyena,
+            R.drawable.dieren02_kameleon, R.drawable.dieren02_patrijs,
+            R.drawable.dieren02_schildpad, R.drawable.dieren02_schorpioen,
+            R.drawable.dieren02_slang, R.drawable.dieren02_stekelvarken,
+            R.drawable.dieren02_uil, R.drawable.dieren02_vos,
+            R.drawable.dieren02_wildzwijn, R.drawable.dieren02_windhond,
+            R.drawable.dieren02_zwaluw
     };
 
     private String[] vertaling = {
-            "Insi", "Aɣyul", "Tɣaṭṭ",
-            "Ayḍi","Uccen","Mucc",
-            "Aqaqriw", "Tyaziḍt", "Tafunast",
-            "Aqninni", "Aɣerda", "Ayis",
-            "Icerri", "Aslem", "Agḍiḍ"
+                  "Adbir", "Aḥamchel ", "Ayaṛziz",
+            "Ifis","Tata","Asekkur",
+            "Icfar", "Tɣirdent", "Afiɣra",
+            "Aruy", "Muka", "Icɛb",
+            "Ilf", "Uccay", "Tiflillest"
+
     };
 
     int quiznum;
