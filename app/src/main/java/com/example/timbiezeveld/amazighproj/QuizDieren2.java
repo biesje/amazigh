@@ -16,6 +16,17 @@ import java.util.Random;
 public class QuizDieren2 extends AppCompatActivity {
 
     private static int[] photomix;
+
+
+    private String[] vertaling = {
+            "Adbir", "Aḥamchel ", "Ayaṛziz",
+            "Ifis","Tata","Asekkur",
+            "Icfar", "Tɣirdent", "Afiɣra",
+            "Aruy", "Muka", "Icɛb",
+            "Ilf", "Uccay", "Tiflillest"
+
+    };
+
     private int[] photos = {
             R.drawable.dieren02_duif, R.drawable.dieren02_gekko,
             R.drawable.dieren02_haas, R.drawable.dieren02_hyena,
@@ -27,13 +38,15 @@ public class QuizDieren2 extends AppCompatActivity {
             R.drawable.dieren02_zwaluw
     };
 
-    private String[] vertaling = {
-                  "Adbir", "Aḥamchel ", "Ayaṛziz",
-            "Ifis","Tata","Asekkur",
-            "Icfar", "Tɣirdent", "Afiɣra",
-            "Aruy", "Muka", "Icɛb",
-            "Ilf", "Uccay", "Tiflillest"
-
+    private int[] geluid = {
+            R.raw.dieren02_duif, R.raw.dieren02_gekko,
+            R.raw.dieren02_haas, R.raw.dieren02_hyena,
+            R.raw.dieren02_kameleon, R.raw.dieren02_patrijs,
+            R.raw.dieren02_schildpad, R.raw.dieren02_schorpioen,
+            R.raw.dieren02_slang, R.raw.dieren02_stekelvarken,
+            R.raw.dieren02_uil, R.raw.dieren02_vos,
+            R.raw.dieren02_wildzwijn, R.raw.dieren02_windhond,
+            R.raw.dieren02_zwaluw
     };
 
     int quiznum;
