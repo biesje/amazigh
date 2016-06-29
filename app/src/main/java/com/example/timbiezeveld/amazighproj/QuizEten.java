@@ -37,9 +37,7 @@ public class QuizEten extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        int[] layouts = new int[] {R.layout.activity_quiz, R.layout.activity_quiz1,R.layout.activity_quiz2,R.layout.activity_quiz3,R.layout.activity_quiz4,R.layout.activity_quiz5,R.layout.activity_quiz6,};
-
-        setContentView(layouts[new Random().nextInt(layouts.length)]);
+        antPosition();
 
         quiznum = 0;
         score = 0;
@@ -68,11 +66,18 @@ public class QuizEten extends AppCompatActivity {
 
     }
 
+    public void antPosition(){
+        int[] layouts = new int[] {R.layout.activity_quiz, R.layout.activity_quiz1,R.layout.activity_quiz2,R.layout.activity_quiz3,R.layout.activity_quiz4,R.layout.activity_quiz5,R.layout.activity_quiz6,};
+
+        setContentView(layouts[new Random().nextInt(layouts.length)]);
+
+    }
 
     public void goedAntwoord(){
         setScore(1);
         if(quiznum<vertaling.length-1) {
             aantalfout = 0;
+            antPosition();
 
             quiznum++;
 
