@@ -38,7 +38,8 @@
         <activity android:name=".OefenKleding" />
         <activity android:name=".OefenKleur" />
         <activity android:name=".OefenWeer" />
-        <activity android:name=".QuizDieren1"></activity>
+        <activity android:name=".QuizDieren1" />
+        <activity android:name=".klaar"></activity>
     </application>
 
 </manifest>

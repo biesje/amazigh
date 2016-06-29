@@ -19,7 +19,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/photo1"
+                android:id="@+id/photo2"
                 android:layout_width="0dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
@@ -31,7 +31,7 @@
                 />
 
             <Button
-                android:id="@+id/photo2"
+                android:id="@+id/photo5"
                 android:layout_width="0dip"
                 android:layout_height="fill_parent"
                 android:layout_margin="5dp"
@@ -75,7 +75,7 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/photo5"
+                android:id="@+id/photo1"
                 android:layout_width="0dip"
                 android:layout_height="match_parent"
                 android:layout_margin="5dp"

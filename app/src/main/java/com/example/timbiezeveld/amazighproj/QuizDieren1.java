@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -39,18 +40,33 @@ public class QuizDieren1 extends AppCompatActivity {
 
     int quiznum;
     int aantalfout;
+    int score;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz);
-        quiznum = 1;
+        int[] layouts = new int[] {R.layout.activity_quiz, R.layout.activity_quiz1,R.layout.activity_quiz2,R.layout.activity_quiz3,R.layout.activity_quiz4,R.layout.activity_quiz5,R.layout.activity_quiz6,};
+
+        setContentView(layouts[new Random().nextInt(layouts.length)]);
+
+        quiznum = 0;
+        score = 0;
         TextView amw = (TextView) findViewById(R.id.amazighwoord); // amazich woor afgekoort met amw
 
 
         amw.setText(vertaling[quiznum]);
         loadImg();
+
+        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        Random randomGenerator = new Random();
+        while (numbers.size() < 4) {
+
+            int random = randomGenerator .nextInt(4);
+            if (!numbers.contains(random)) {
+                numbers.add(random);
+            }
+        }
 
 
 
@@ -63,27 +79,33 @@ public class QuizDieren1 extends AppCompatActivity {
 
 
     public void goedAntwoord(){
+        setScore(1);
+        if(quiznum<vertaling.length-1) {
+            aantalfout = 0;
 
-        aantalfout=0;
+            quiznum++;
 
-        quiznum++;
-
-        TextView amw = (TextView) findViewById(R.id.amazighwoord); // amazich woor afgekoort met amw
+            TextView amw = (TextView) findViewById(R.id.amazighwoord); // amazich woor afgekoort met amw
 
 
-        amw.setText(vertaling[quiznum]);
-        setKleur(1,"#ffffff" );
-        setKleur(2,"#ffffff" );
-        setKleur(3,"#ffffff" );
-        setKleur(4,"#ffffff" );
-        setKleur(5,"#ffffff" );
-        setKleur(6,"#ffffff" );
+            amw.setText(vertaling[quiznum]);
 
-        loadImg();
 
+            loadImg();
+        }
+        else{
+            Intent intent = new Intent(QuizDieren1.this,klaar.class);
+            intent.putExtra("extra_text", String.valueOf(this.score));
+
+            startActivity(intent);
+
+
+        }
 
     }
-    public void setKleur(int i, String k){
+
+
+    public void setFout(int i, String k){
         switch (i) {
             case 1:
                 Button btn1 = (Button) findViewById(R.id.photo1); // amazich woor afgekoort met amw
@@ -92,25 +114,26 @@ public class QuizDieren1 extends AppCompatActivity {
                 break;
             case 2:
                 Button btn2 = (Button) findViewById(R.id.photo2); // amazich woor afgekoort met amw
-                btn2.setBackgroundColor(Color.parseColor(k));
+                btn2.setBackgroundResource(R.drawable.kruis);
 
                 break;
             case 3:
                 Button btn3 = (Button) findViewById(R.id.photo3); // amazich woor afgekoort met amw
 
-                btn3.setBackgroundColor(Color.parseColor(k));
+                btn3.setBackgroundResource(R.drawable.kruis);
                 break;
             case 4:
                 Button btn4 = (Button) findViewById(R.id.photo4); // amazich woor afgekoort met amw
-                btn4.setBackgroundColor(Color.parseColor(k));
+                btn4.setBackgroundResource(R.drawable.kruis);
                 break;
             case 5:
                 Button btn5 = (Button) findViewById(R.id.photo5); // amazich woor afgekoort met amw
-                btn5.setBackgroundColor(Color.parseColor(k));
+                btn5.setBackgroundResource(R.drawable.kruis);
                 break;
             case 6:
                 Button btn6 = (Button) findViewById(R.id.photo6); // amazich woor afgekoort met amw
-                btn6.setBackgroundColor(Color.parseColor(k));
+                shuffle();
+                btn6.setBackgroundResource(R.drawable.kruis);
 
 
 
@@ -118,7 +141,8 @@ public class QuizDieren1 extends AppCompatActivity {
         }}
 
     public void foutAntwoord(int i){
-        setKleur(i,"#FF0000" );
+        setFout(i,"#FF0000" );
+        setScore(-1);
     }
 
 
@@ -202,12 +226,50 @@ RandomizeArray(photos);
         for (int i=0; i<array.length; i++) {
             int randomPosition = rgen.nextInt(array.length);
             int temp = array[i];
+
             array[i] = array[randomPosition];
             array[randomPosition] = temp;
         }
 
         photomix= array;
-    }}
+    }
+    public void setScore(int score){
+
+        this.score=this.score+score;
+        TextView txt = (TextView) findViewById(R.id.score); // score view
+
+        txt.setText("Score: "+String.valueOf(this.score));
+    }
+
+    public void shuffle(){
+        List<Integer> objects = new ArrayList<Integer>();
+        objects.add(0);
+        objects.add(1);
+        objects.add(2);
+        objects.add(3);
+        objects.add(4);
+
+        // Shuffle the collection
+        Collections.shuffle(objects);
+
+        List<Button> buttons = new ArrayList<Button>();
+        buttons.add((Button)findViewById(R.id.photo1));
+        buttons.add((Button)findViewById(R.id.photo2));
+        buttons.add((Button)findViewById(R.id.photo4));
+        buttons.add((Button)findViewById(R.id.photo5));
+        buttons.add((Button)findViewById(R.id.photo6));
+
+        for (int i = 0; i < objects.size(); i++) {
+            buttons.get(i).setText(objects.get(i).toString());
+        }
+
+
+
+    }
+
+
+
+}
 
 
 
