@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#0099cc"
+
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -31,7 +31,7 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="fill_parent"
                 android:layout_column="0"
-                android:background="#cc0033"
+
                 android:onClick="startDieren1"
                 android:text="Dieren 01"
 
@@ -49,7 +49,7 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="fill_parent"
                 android:layout_column="0"
-                android:background="#cc0033"
+
                 android:onClick="oefenFruit"
                 android:text="Fruit" />
         </TableRow>
@@ -65,8 +65,8 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="fill_parent"
                 android:layout_column="0"
-                android:background="#cc0033"
-                android:onClick="RedirectOefenInsecten"
+
+                android:onClick="oefenInsecten"
                 android:text="Insecten" />
         </TableRow>
 
@@ -81,8 +81,8 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="fill_parent"
                 android:layout_column="0"
-                android:background="#99cc33"
-                android:onClick="RedirectOefenGroente"
+
+                android:onClick="oefenGroente"
                 android:text="groente" />
         </TableRow>
 
@@ -97,8 +97,8 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="fill_parent"
                 android:layout_column="0"
-                android:background="#99cc33"
-                android:onClick="RedirectOefenDierenTwee"
+
+                android:onClick="oefenDieren2"
                 android:text="DIEREN 02" />
         </TableRow>
 
@@ -112,7 +112,6 @@
                 android:id="@+id/button18"
                 android:layout_height="fill_parent"
                 android:layout_column="0"
-                android:background="#99cc33"
                 android:onClick="startEten"
                 android:text="eten" />
         </TableRow>
@@ -128,9 +127,8 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="fill_parent"
                 android:layout_column="0"
-                android:background="#ffe513"
-                android:onClick="RedirectOefenKleding"
-                android:text="kleding" />
+                android:onClick="oefenKleding"
+                android:text="Kleding" />
         </TableRow>
 
         <TableRow
@@ -144,9 +142,9 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="fill_parent"
                 android:layout_column="0"
-                android:background="#ffe513"
-                android:onClick="RedirectOefenKleuren"
-                android:text="kleur" />
+                android:onClick="oefenKleur"
+                android:text="kleur"
+                android:nestedScrollingEnabled="false" />
         </TableRow>
 
         <TableRow
@@ -159,8 +157,8 @@
                 style="?android:attr/buttonStyleSmall"
                 android:layout_height="fill_parent"
                 android:layout_column="0"
-                android:background="#ffe513"
-                android:onClick="RedirectOefenWeer"
+
+                android:onClick="oefenWeer"
                 android:text="weer" />
         </TableRow>
     </TableLayout>

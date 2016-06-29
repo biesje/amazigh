@@ -1,6 +1,5 @@
 package com.example.timbiezeveld.amazighproj;
 
-
 import android.app.Activity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -8,49 +7,48 @@ import android.view.MotionEvent;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class OefenKleding extends Activity
+public class OefenFood extends Activity
 {
     float x1,x2;
     float y1, y2;
     int arrayNum;
     int aantalWoorden;
     private String[] woorden = {
-            "broek", "trui", "onderhemd",
-            "jas","schoenen","laarzen",
-            "muts", "jurk", "rok",
-            "slippers", "handschoenen", "sokken",
-            "overhemd", "sjaal", "riem"
+            "Eieren", "olie", "koekjes",
+            "thee","koffie","melk",
+            "yoghurt", "water", "brood",
+            "honing", "suiker", "zout",
+            "vlees", "vissen", "boter"
+
     };
 
     private String[] vertaling = {
-            "ssarwal", "amaryul", "camisita",
-            "aqabud","tisila","ihakusen",
-            "tcaccict", "tablust", "farda",
-            "tcinklat", "iwantisan", "tqacir",
-            "taqmijjat", "ahewwak", "abyas"
-    };
+            "timejjalin", "zzict", "ɣayiṭa",
+            "atay","rqehwa","aɣi",
+            "accil", "aman", "aɣrum",
+            "tamment", "sseqqur", "tamellaḥt",
+            "aysum", "iselman", "ddhen"    };
 
     private int[] photos = {
-            R.drawable.kleding_broek, R.drawable.kleding_trui,
-            R.drawable.kleding_onderhemd, R.drawable.kleding_jas,
-            R.drawable.kleding_schoenen, R.drawable.kleding_laarzen,
-            R.drawable.kleding_muts, R.drawable.kleding_jurk,
-            R.drawable.kleding_rok, R.drawable.kleding_slippers,
-            R.drawable.kleding_handschoenen, R.drawable.kleding_sokken,
-            R.drawable.kleding_overhemd, R.drawable.kleding_sjaal,
-            R.drawable.kleding_riem
-    };
+            R.drawable.eten_eieren, R.drawable.eten_olie,
+            R.drawable.eten_koekjes, R.drawable.eten_thee,
+            R.drawable.eten_koffie, R.drawable.eten_melk,
+            R.drawable.eten_yoghurt, R.drawable.eten_water,
+            R.drawable.eten_brood, R.drawable.eten_honing,
+            R.drawable.eten_suiker, R.drawable.eten_zout,
+            R.drawable.eten_vlees, R.drawable.eten_vissen,
+            R.drawable.eten_boter    };
 
     private int[] geluid = {
-            R.raw.kleding_broek, R.raw.kleding_trui,
-            R.raw.kleding_onderhemd, R.raw.kleding_jas,
-            R.raw.kleding_schoenen, R.raw.kleding_laarzen,
-            R.raw.kleding_muts, R.raw.kleding_jurk,
-            R.raw.kleding_rok, R.raw.kleding_slippers,
-            R.raw.kleding_handschoenen, R.raw.kleding_sokken,
-            R.raw.kleding_overhemd, R.raw.kleding_sjaal,
-            R.raw.kleding_riem
-    };
+            R.raw.eten_eieren, R.raw.eten_olie,
+            R.raw.eten_eieren, R.raw.eten_olie,
+            R.raw.eten_koekjes, R.raw.eten_thee,
+            R.raw.eten_koffie, R.raw.eten_melk,
+            R.raw.eten_yoghurt, R.raw.eten_water,
+            R.raw.eten_brood, R.raw.eten_honing,
+            R.raw.eten_suiker, R.raw.eten_zout,
+            R.raw.eten_vlees, R.raw.eten_vissen,
+            R.raw.eten_boter    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
