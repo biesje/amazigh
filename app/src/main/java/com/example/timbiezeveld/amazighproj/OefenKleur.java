@@ -15,29 +15,33 @@ public class OefenKleur extends Activity
     int arrayNum;
     int aantalWoorden;
     private String[] woorden = {
-            "Egel", "Ezel", "Geit",
-            "Hond","Jakhals","Kat",
-            "Kikker", "Kip", "Koe",
-            "Konijn", "Muis", "Paard",
-            "Schaap", "Vis", "Vogel"
+            "rood", "geel", "blauw",
+            "zwart","wit","bruin",
+            "groen", "oranje", "bont",
+            "paars"
     };
 
     private String[] vertaling = {
-            "Insi", "Aɣyul", "Tɣaṭṭ",
-            "Ayḍi","Uccen","Mucc",
-            "Aqaqriw", "Tyaziḍt", "Tafunast",
-            "Aqninni", "Aɣerda", "Ayis",
-            "Icerri", "Aslem", "Agḍiḍ"
+            "azegg-aɣ", "awraɣ", "aḥmaymi",
+            "abarcan","acemlal","ahemruni",
+            "aziza", "aletcini", "akarkac",
+            "azbaybi"
     };
 
     private int[] photos = {
-          R.drawable.dieren01_egel,R.drawable.dieren01_ezel, R.drawable.dieren01_geit,R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
-            R.drawable.dieren01_kikker, R.drawable.dieren01_kip, R.drawable.dieren01_koe, R.drawable.dieren01_konijn, R.drawable.dieren01_muis, R.drawable.dieren01_paard, R.drawable.dieren01_schaap, R.drawable.dieren01_vis, R.drawable.dieren01_vogel
+            R.drawable.kleuren_rood, R.drawable.kleuren_geel,
+            R.drawable.kleuren_blauw, R.drawable.kleuren_zwart,
+            R.drawable.kleuren_wit, R.drawable.kleuren_bruin,
+            R.drawable.kleuren_groen, R.drawable.kleuren_oranje,
+            R.drawable.kleuren_bont, R.drawable.kleuren_paars
     };
 
     private int[] geluid = {
-            R.raw.dieren01_egel,R.raw.dieren01_ezel, R.raw.dieren01_geit,R.raw.dieren01_hond, R.raw.dieren01_jakhals, R.raw.dieren01_kat,
-            R.raw.dieren01_kikker, R.raw.dieren01_kip, R.raw.dieren01_koe, R.raw.dieren01_konijn, R.raw.dieren01_muis, R.raw.dieren01_paard, R.raw.dieren01_schaap, R.raw.dieren01_vis, R.raw.dieren01_vogel
+            R.raw.kleuren_rood, R.raw.kleuren_geel,
+            R.raw.kleuren_blauw, R.raw.kleuren_zwart,
+            R.raw.kleuren_wit, R.raw.kleuren_bruin,
+            R.raw.kleuren_groen, R.raw.kleuren_oranje,
+            R.raw.kleuren_bont, R.raw.kleuren_paars
     };
 
     @Override
