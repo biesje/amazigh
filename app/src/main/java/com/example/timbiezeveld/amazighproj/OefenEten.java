@@ -15,7 +15,7 @@ public class OefenEten extends Activity
     int arrayNum;
     int aantalWoorden;
     private String[] woorden = {
-                  "Eieren", "olie", "koekjes",
+            "Eieren", "olie", "koekjes",
             "thee","koffie","melk",
             "yoghurt", "water", "brood",
             "honing", "suiker", "zout",
@@ -24,7 +24,7 @@ public class OefenEten extends Activity
     };
 
     private String[] vertaling = {
-                      "timejjalin", "zzict", "ɣayiṭa",
+            "timejjalin", "zzict", "ɣayiṭa",
             "atay","rqehwa","aɣi",
             "accil", "aman", "aɣrum",
             "tamment", "sseqqur", "tamellaḥt",
@@ -33,24 +33,27 @@ public class OefenEten extends Activity
     };
 
     private int[] photos = {
- R.drawable.eten_eieren, R.drawable.eten_olie,
+            R.drawable.eten_eieren, R.drawable.eten_olie,
             R.drawable.eten_koekjes, R.drawable.eten_thee,
             R.drawable.eten_koffie, R.drawable.eten_melk,
             R.drawable.eten_yoghurt, R.drawable.eten_water,
             R.drawable.eten_brood, R.drawable.eten_honing,
             R.drawable.eten_suiker, R.drawable.eten_zout,
             R.drawable.eten_vlees, R.drawable.eten_vissen,
-            R.drawable.eten_boter    };
+            R.drawable.eten_boter
+            };
 
     private int[] geluid = {
  R.raw.eten_eieren, R.raw.eten_olie,
+            R.raw.eten_eieren, R.raw.eten_olie,
             R.raw.eten_koekjes, R.raw.eten_thee,
             R.raw.eten_koffie, R.raw.eten_melk,
             R.raw.eten_yoghurt, R.raw.eten_water,
             R.raw.eten_brood, R.raw.eten_honing,
             R.raw.eten_suiker, R.raw.eten_zout,
             R.raw.eten_vlees, R.raw.eten_vissen,
-            R.raw.eten_boter    };
+            R.raw.eten_boter
+            };
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
