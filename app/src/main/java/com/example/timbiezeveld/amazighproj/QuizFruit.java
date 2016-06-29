@@ -16,7 +16,6 @@ import java.util.Random;
 
 public class QuizFruit extends AppCompatActivity {
 
-    private static int[] photomix;
     private String[] vertaling = {
             "tateffaht", "tafirast", "rmecmac",
             "rxux","aḍil","ddellaɛ",
@@ -26,6 +25,16 @@ public class QuizFruit extends AppCompatActivity {
     };
 
     private int[] photos = {
+            R.drawable.fruit_appel, R.drawable.fruit_peer,
+            R.drawable.fruit_abrikoos, R.drawable.fruit_perzik,
+            R.drawable.fruit_druiven, R.drawable.fruit_watermeloen,
+            R.drawable.fruit_honingmeloen, R.drawable.fruit_granaatappel,
+            R.drawable.fruit_vijg, R.drawable.fruit_cactusvijg,
+            R.drawable.fruit_pruim, R.drawable.fruit_sinaasappel,
+            R.drawable.fruit_dadel, R.drawable.fruit_citroen,
+            R.drawable.fruit_bananen
+    };
+    private int[] photomix = {
             R.drawable.fruit_appel, R.drawable.fruit_peer,
             R.drawable.fruit_abrikoos, R.drawable.fruit_perzik,
             R.drawable.fruit_druiven, R.drawable.fruit_watermeloen,
@@ -238,7 +247,6 @@ public class QuizFruit extends AppCompatActivity {
             array[randomPosition] = temp;
         }
 
-        photomix= array;
     }
     public void setScore(int score, boolean aanpas){
 
