@@ -22,12 +22,36 @@ public class QuizInsecten extends AppCompatActivity {
     };
 
     private String[] vertaling = {
-            "Insi", "Aɣyul", "Tɣaṭṭ",
-            "Ayḍi","Uccen","Mucc",
-            "Aqaqriw", "Tyaziḍt", "Tafunast",
-            "Aqninni", "Aɣerda", "Ayis",
-            "Icerri", "Aslem", "Agḍiḍ"
+            "aɣlal", "adan n tmurt", "takecca",
+            "iẓi","zizwit","nnamus",
+            "tikedfet", "aferṭṭu", "qundɣa ",
+            "burxes", "bugḍif", "yaẓẓa",
+            "buccel ", "tiḍḍa", "tamraebt"
+
     };
+
+    private int[] photos = {
+            R.drawable.insecten_slak, R.drawable.insecten_regenworm,
+            R.drawable.insecten_larve, R.drawable.insecten_vlieg,
+            R.drawable.insecten_bij, R.drawable.insecten_mug,
+            R.drawable.insecten_mier, R.drawable.insecten_vlinder,
+            R.drawable.insecten_spin, R.drawable.insecten_sprinkhaan,
+            R.drawable.insecten_rups, R.drawable.insecten_wesp,
+            R.drawable.insecten_naaktslak, R.drawable.insecten_bloedzuiger,
+            R.drawable.insecten_bidsprinkhaan
+    };
+
+    private int[] geluid = {
+            R.raw.insecten_slak, R.raw.insecten_regenworm,
+            R.raw.insecten_larve, R.raw.insecten_vlieg,
+            R.raw.insecten_bij, R.raw.insecten_mug,
+            R.raw.insecten_mier, R.raw.insecten_vlinder,
+            R.raw.insecten_spin, R.raw.insecten_sprinkhaan,
+            R.raw.insecten_rups, R.raw.insecten_wesp,
+            R.raw.insecten_naaktslak, R.raw.insecten_bloedzuiger,
+            R.raw.insecten_bidsprinkhaan
+    };
+
 
     int quiznum;
     int aantalfout;
