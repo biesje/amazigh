@@ -134,22 +134,6 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1">
-
-            <Button
-                android:id="@+id/button20"
-                style="?android:attr/buttonStyleSmall"
-                android:layout_height="fill_parent"
-                android:layout_column="0"
-                android:onClick="oefenKleur"
-                android:text="kleur"
-                android:nestedScrollingEnabled="false" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
             android:layout_weight="1">
 
             <Button
