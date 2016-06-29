@@ -15,7 +15,7 @@ public class OefenDieren2 extends Activity
     int arrayNum;
     int aantalWoorden;
     private String[] woorden = {
-                      "Duif", "Gekko", "Haas",
+            "Duif", "Gekko", "Haas",
             "Hyena","Kameleon","Patrijs",
             "Schildpad", "Schorpioen", "Slang",
             "Stekelvarken", "Uil", "Vos",
@@ -24,22 +24,34 @@ public class OefenDieren2 extends Activity
     };
 
     private String[] vertaling = {
-                       "Duif", "Gekko", "Haas",
-            "Hyena","Kameleon","Patrijs",
-            "Schildpad", "Schorpioen", "Slang",
-            "Stekelvarken", "Uil", "Vos",
-            "Wilfzwijn", "Windhond", "Zwaluw"
+            "Adbir", "Aḥamchel ", "Ayaṛziz",
+            "Ifis","Tata","Asekkur",
+            "Icfar", "Tɣirdent", "Afiɣra",
+            "Aruy", "Muka", "Icɛb",
+            "Ilf", "Uccay", "Tiflillest"
 
     };
 
     private int[] photos = {
-          R.drawable.dieren01_egel,R.drawable.dieren01_ezel, R.drawable.dieren01_geit,R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
-            R.drawable.dieren01_kikker, R.drawable.dieren01_kip, R.drawable.dieren01_koe, R.drawable.dieren01_konijn, R.drawable.dieren01_muis, R.drawable.dieren01_paard, R.drawable.dieren01_schaap, R.drawable.dieren01_vis, R.drawable.dieren01_vogel
+            R.drawable.dieren02_duif, R.drawable.dieren02_gekko,
+            R.drawable.dieren02_haas, R.drawable.dieren02_hyena,
+            R.drawable.dieren02_kameleon, R.drawable.dieren02_patrijs,
+            R.drawable.dieren02_schildpad, R.drawable.dieren02_schorpioen,
+            R.drawable.dieren02_slang, R.drawable.dieren02_stekelvarken,
+            R.drawable.dieren02_uil, R.drawable.dieren02_vos,
+            R.drawable.dieren02_wildzwijn, R.drawable.dieren02_windhond,
+            R.drawable.dieren02_zwaluw
     };
 
     private int[] geluid = {
-            R.raw.dieren01_egel,R.raw.dieren01_ezel, R.raw.dieren01_geit,R.raw.dieren01_hond, R.raw.dieren01_jakhals, R.raw.dieren01_kat,
-            R.raw.dieren01_kikker, R.raw.dieren01_kip, R.raw.dieren01_koe, R.raw.dieren01_konijn, R.raw.dieren01_muis, R.raw.dieren01_paard, R.raw.dieren01_schaap, R.raw.dieren01_vis, R.raw.dieren01_vogel
+            R.raw.dieren02_duif, R.raw.dieren02_gekko,
+            R.raw.dieren02_haas, R.raw.dieren02_hyena,
+            R.raw.dieren02_kameleon, R.raw.dieren02_patrijs,
+            R.raw.dieren02_schildpad, R.raw.dieren02_schorpioen,
+            R.raw.dieren02_slang, R.raw.dieren02_stekelvarken,
+            R.raw.dieren02_uil, R.raw.dieren02_vos,
+            R.raw.dieren02_wildzwijn, R.raw.dieren02_windhond,
+            R.raw.dieren02_zwaluw
     };
 
     @Override
