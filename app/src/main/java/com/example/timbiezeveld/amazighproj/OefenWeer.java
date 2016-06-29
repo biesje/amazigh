@@ -15,29 +15,42 @@ public class OefenWeer extends Activity
     int arrayNum;
     int aantalWoorden;
     private String[] woorden = {
-            "Egel", "Ezel", "Geit",
-            "Hond","Jakhals","Kat",
-            "Kikker", "Kip", "Koe",
-            "Konijn", "Muis", "Paard",
-            "Schaap", "Vis", "Vogel"
+            "lente", "zomer", "herfst",
+            "winter","regen","sneeuw",
+            "wind", "regenboog", "maan",
+            "zon", "halvemaan", "donder",
+            "ster", "mist", "wolken"
+
     };
 
     private String[] vertaling = {
-            "Insi", "Aɣyul", "Tɣaṭṭ",
-            "Ayḍi","Uccen","Mucc",
-            "Aqaqriw", "Tyaziḍt", "Tafunast",
-            "Aqninni", "Aɣerda", "Ayis",
-            "Icerri", "Aslem", "Agḍiḍ"
+            "tafsut", "anebdu", "leiglief",
+            "tajarst","anẓar","adfel",
+            "asemmiḍ taslit n", "unzar", "yur",
+            "tfuct", "taziri", "ajjaj",
+            "itri", "tayyut", "asinu"
     };
 
     private int[] photos = {
-          R.drawable.dieren01_egel,R.drawable.dieren01_ezel, R.drawable.dieren01_geit,R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
-            R.drawable.dieren01_kikker, R.drawable.dieren01_kip, R.drawable.dieren01_koe, R.drawable.dieren01_konijn, R.drawable.dieren01_muis, R.drawable.dieren01_paard, R.drawable.dieren01_schaap, R.drawable.dieren01_vis, R.drawable.dieren01_vogel
+            R.drawable.weer_lente, R.drawable.weer_zomer,
+            R.drawable.weer_herfst, R.drawable.weer_winter,
+            R.drawable.weer_regen, R.drawable.weer_sneeuw,
+            R.drawable.weer_wind, R.drawable.weer_regenboog,
+            R.drawable.weer_maan, R.drawable.weer_zon,
+            R.drawable.weer_halvemaan, R.drawable.weer_donder,
+            R.drawable.weer_ster, R.drawable.weer_mist,
+            R.drawable.weer_wolken
     };
 
     private int[] geluid = {
-            R.raw.dieren01_egel,R.raw.dieren01_ezel, R.raw.dieren01_geit,R.raw.dieren01_hond, R.raw.dieren01_jakhals, R.raw.dieren01_kat,
-            R.raw.dieren01_kikker, R.raw.dieren01_kip, R.raw.dieren01_koe, R.raw.dieren01_konijn, R.raw.dieren01_muis, R.raw.dieren01_paard, R.raw.dieren01_schaap, R.raw.dieren01_vis, R.raw.dieren01_vogel
+            R.raw.weer_lente, R.raw.weer_zomer,
+            R.raw.weer_herfst, R.raw.weer_winter,
+            R.raw.weer_regen, R.raw.weer_sneeuw,
+            R.raw.weer_wind, R.raw.weer_regenboog,
+            R.raw.weer_maan, R.raw.weer_zon,
+            R.raw.weer_halvemaan, R.raw.weer_donder,
+            R.raw.weer_ster, R.raw.weer_mist,
+            R.raw.weer_wolken
     };
 
     @Override
