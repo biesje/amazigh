@@ -21,7 +21,7 @@ public class OefenFruit extends Activity
     int arrayNum;
     int aantalWoorden;
     private String[] woorden = {
-           "appel", "peer", "abrikoos",
+            "appel", "peer", "abrikoos",
             "perzik","druiven","watermeloen",
             "honingmeloen", "granaatappel", "vijg",
             "cactusvijg", "pruim", "sinaasappel",
@@ -29,7 +29,7 @@ public class OefenFruit extends Activity
     };
 
     private String[] vertaling = {
-                 "tateffaht", "tafirast", "rmecmac",
+            "tateffaht", "tafirast", "rmecmac",
             "rxux","aḍil","ddellaɛ",
             "abettix", "arremman", "tazart",
             "tahendict", "rbarquq", "taleccint",
@@ -37,13 +37,25 @@ public class OefenFruit extends Activity
     };
 
     private int[] photos = {
-        R.drawable.fruit_appel, R.drawable.fruit_peer, R.drawable.fruit_abrikoos, R.drawable.fruit_perzik, R.drawable.fruit_druiven, R.drawable.fruit_watermeloen, R.drawable.fruit_honingmeloen,
-            R.drawable.fruit_granaatappel, R.drawable.fruit_vijg,
+            R.drawable.fruit_appel, R.drawable.fruit_peer,
+            R.drawable.fruit_abrikoos, R.drawable.fruit_perzik,
+            R.drawable.fruit_druiven, R.drawable.fruit_watermeloen,
+            R.drawable.fruit_honingmeloen, R.drawable.fruit_granaatappel,
+            R.drawable.fruit_vijg, R.drawable.fruit_cactusvijg,
+            R.drawable.fruit_pruim, R.drawable.fruit_sinaasappel,
+            R.drawable.fruit_dadel, R.drawable.fruit_citroen,
+            R.drawable.fruit_bananen
     };
 
     private int[] geluid = {
-            R.raw.dieren01_egel,R.raw.dieren01_ezel, R.raw.dieren01_geit,R.raw.dieren01_hond, R.raw.dieren01_jakhals, R.raw.dieren01_kat,
-            R.raw.dieren01_kikker, R.raw.dieren01_kip, R.raw.dieren01_koe, R.raw.dieren01_konijn, R.raw.dieren01_muis, R.raw.dieren01_paard, R.raw.dieren01_schaap, R.raw.dieren01_vis, R.raw.dieren01_vogel
+            R.raw.fruit_appel, R.raw.fruit_peer,
+            R.raw.fruit_abrikoos, R.raw.fruit_perzik,
+            R.raw.fruit_druiven, R.raw.fruit_watermeloen,
+            R.raw.fruit_honingmeloen, R.raw.fruit_granaatappel,
+            R.raw.fruit_vijg, R.raw.fruit_cactusvijg,
+            R.raw.fruit_pruim, R.raw.fruit_sinaasappel,
+            R.raw.fruit_dadel, R.raw.fruit_citroen,
+            R.raw.fruit_bananen
     };
 
     @Override
