@@ -2,6 +2,7 @@ package com.example.timbiezeveld.amazighproj;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -78,7 +79,8 @@ public class QuizWeer extends AppCompatActivity {
 
         setContentView(layouts[new Random().nextInt(layouts.length)]);
         setScore(0, true);
-
+        final MediaPlayer mp = MediaPlayer.create(this, geluid[quiznum]);
+        mp.start();
 
     }
 
@@ -86,8 +88,8 @@ public class QuizWeer extends AppCompatActivity {
         setScore(2, false);
         if(quiznum<vertaling.length-1) {
             aantalfout = 0;
-            antPosition();
             quiznum++;
+            antPosition();
 
             TextView amw = (TextView) findViewById(R.id.amazighwoord); // amazich woor afgekoort met amw
 
@@ -200,7 +202,7 @@ public class QuizWeer extends AppCompatActivity {
         n6 = 5;
 
 
-        RandomizeArray(photos);
+        RandomizeArray(photomix);
         Button btn1 = (Button) findViewById(R.id.photo1); // amazich woor afgekoort met amw
         btn1.setBackgroundResource(photos[quiznum]);
 
@@ -213,8 +215,10 @@ public class QuizWeer extends AppCompatActivity {
         Button btn5 = (Button) findViewById(R.id.photo5); // amazich woor afgekoort met amw
         btn5.setBackgroundResource(photomix[6]);
         Button btn6 = (Button) findViewById(R.id.photo6); // amazich woor afgekoort met amw
-        btn6.setBackgroundResource(photos[7]);
+        btn6.setBackgroundResource(photomix[7]);
     }
+
+
 
 
 

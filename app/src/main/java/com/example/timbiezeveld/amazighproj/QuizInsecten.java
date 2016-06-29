@@ -205,7 +205,7 @@ public class QuizInsecten extends AppCompatActivity {
         n6 = 5;
 
 
-        RandomizeArray(photos);
+        RandomizeArray(photomix);
         Button btn1 = (Button) findViewById(R.id.photo1); // amazich woor afgekoort met amw
         btn1.setBackgroundResource(photos[quiznum]);
 
@@ -218,8 +218,9 @@ public class QuizInsecten extends AppCompatActivity {
         Button btn5 = (Button) findViewById(R.id.photo5); // amazich woor afgekoort met amw
         btn5.setBackgroundResource(photomix[6]);
         Button btn6 = (Button) findViewById(R.id.photo6); // amazich woor afgekoort met amw
-        btn6.setBackgroundResource(photos[7]);
+        btn6.setBackgroundResource(photomix[7]);
     }
+
 
 
 
