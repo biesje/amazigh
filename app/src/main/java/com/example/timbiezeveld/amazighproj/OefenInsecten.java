@@ -17,29 +17,42 @@ public class OefenInsecten extends Activity
     int arrayNum;
     int aantalWoorden;
     private String[] woorden = {
-            "Egel", "Ezel", "Geit",
-            "Hond","Jakhals","Kat",
-            "Kikker", "Kip", "Koe",
-            "Konijn", "Muis", "Paard",
-            "Schaap", "Vis", "Vogel"
+            "slak", "regenworm", "larve",
+            "vlieg","bij","mug",
+            "mier", "vlinder", "spin",
+            "sprinkhaan", "rups", "wesp",
+            "naaktslak", "bloedzuiger", "bidsprinkhaan"
     };
 
     private String[] vertaling = {
-            "Insi", "Aɣyul", "Tɣaṭṭ",
-            "Ayḍi","Uccen","Mucc",
-            "Aqaqriw", "Tyaziḍt", "Tafunast",
-            "Aqninni", "Aɣerda", "Ayis",
-            "Icerri", "Aslem", "Agḍiḍ"
+            "aɣlal", "adan n tmurt", "takecca",
+            "iẓi","zizwit","nnamus",
+            "tikedfet", "aferṭṭu", "qundɣa ",
+            "burxes", "bugḍif", "yaẓẓa",
+            "buccel ", "tiḍḍa", "tamraebt"
+
     };
 
     private int[] photos = {
-          R.drawable.dieren01_egel,R.drawable.dieren01_ezel, R.drawable.dieren01_geit,R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
-            R.drawable.dieren01_kikker, R.drawable.dieren01_kip, R.drawable.dieren01_koe, R.drawable.dieren01_konijn, R.drawable.dieren01_muis, R.drawable.dieren01_paard, R.drawable.dieren01_schaap, R.drawable.dieren01_vis, R.drawable.dieren01_vogel
+            R.drawable.insecten_slak, R.drawable.insecten_regenworm,
+            R.drawable.insecten_larve, R.drawable.insecten_vlieg,
+            R.drawable.insecten_bij, R.drawable.insecten_mug,
+            R.drawable.insecten_mier, R.drawable.insecten_vlinder,
+            R.drawable.insecten_spin, R.drawable.insecten_sprinkhaan,
+            R.drawable.insecten_rups, R.drawable.insecten_wesp,
+            R.drawable.insecten_naaktslak, R.drawable.insecten_bloedzuiger,
+            R.drawable.insecten_bidsprinkhaan
     };
 
     private int[] geluid = {
-            R.raw.dieren01_egel,R.raw.dieren01_ezel, R.raw.dieren01_geit,R.raw.dieren01_hond, R.raw.dieren01_jakhals, R.raw.dieren01_kat,
-            R.raw.dieren01_kikker, R.raw.dieren01_kip, R.raw.dieren01_koe, R.raw.dieren01_konijn, R.raw.dieren01_muis, R.raw.dieren01_paard, R.raw.dieren01_schaap, R.raw.dieren01_vis, R.raw.dieren01_vogel
+            R.raw.insecten_slak, R.raw.insecten_regenworm,
+            R.raw.insecten_larve, R.raw.insecten_vlieg,
+            R.raw.insecten_bij, R.raw.insecten_mug,
+            R.raw.insecten_mier, R.raw.insecten_vlinder,
+            R.raw.insecten_spin, R.raw.insecten_sprinkhaan,
+            R.raw.insecten_rups, R.raw.insecten_wesp,
+            R.raw.insecten_naaktslak, R.raw.insecten_bloedzuiger,
+            R.raw.insecten_bidsprinkhaan
     };
 
     @Override
