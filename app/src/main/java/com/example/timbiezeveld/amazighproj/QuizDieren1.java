@@ -29,24 +29,20 @@ public class QuizDieren1 extends AppCompatActivity {
 
 
     private int[] photos = {
-            R.drawable.dieren01_egel,R.drawable.dieren01_ezel, R.drawable.dieren01_geit,R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
+            R.drawable.dieren01_egel, R.drawable.dieren01_ezel, R.drawable.dieren01_geit, R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
             R.drawable.dieren01_kikker, R.drawable.dieren01_kip, R.drawable.dieren01_koe, R.drawable.dieren01_konijn, R.drawable.dieren01_muis, R.drawable.dieren01_paard, R.drawable.dieren01_schaap, R.drawable.dieren01_vis, R.drawable.dieren01_vogel
     };
 
 
-    private int[] photomix = {
-            R.drawable.dieren01_egel,R.drawable.dieren01_ezel, R.drawable.dieren01_geit,R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
-            R.drawable.dieren01_kikker, R.drawable.dieren01_kip, R.drawable.dieren01_koe, R.drawable.dieren01_konijn, R.drawable.dieren01_muis, R.drawable.dieren01_paard, R.drawable.dieren01_schaap, R.drawable.dieren01_vis, R.drawable.dieren01_vogel
-    };
     private String[] vertaling = {
             "Insi", "Aɣyul", "Tɣaṭṭ",
-            "Ayḍi","Uccen","Mucc",
+            "Ayḍi", "Uccen", "Mucc",
             "Aqaqriw", "Tyaziḍt", "Tafunast",
             "Aqninni", "Aɣerda", "Ayis",
             "Icerri", "Aslem", "Agḍiḍ"
     };
     private int[] geluid = {
-            R.raw.dieren01_egel,R.raw.dieren01_ezel, R.raw.dieren01_geit,R.raw.dieren01_hond, R.raw.dieren01_jakhals, R.raw.dieren01_kat,
+            R.raw.dieren01_egel, R.raw.dieren01_ezel, R.raw.dieren01_geit, R.raw.dieren01_hond, R.raw.dieren01_jakhals, R.raw.dieren01_kat,
             R.raw.dieren01_kikker, R.raw.dieren01_kip, R.raw.dieren01_koe, R.raw.dieren01_konijn, R.raw.dieren01_muis, R.raw.dieren01_paard, R.raw.dieren01_schaap, R.raw.dieren01_vis, R.raw.dieren01_vogel
     };
 
@@ -74,31 +70,10 @@ public class QuizDieren1 extends AppCompatActivity {
         amw.setText(vertaling[quiznum]);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 
-    public void antPosition(){
-        int[] layouts = new int[] {R.layout.activity_quiz, R.layout.activity_quiz1,R.layout.activity_quiz2,R.layout.activity_quiz3,R.layout.activity_quiz4,R.layout.activity_quiz5,R.layout.activity_quiz6,};
+    public void antPosition() {
+        int[] layouts = new int[]{R.layout.activity_quiz, R.layout.activity_quiz1, R.layout.activity_quiz2, R.layout.activity_quiz3, R.layout.activity_quiz4, R.layout.activity_quiz5, R.layout.activity_quiz6,};
 
         setContentView(layouts[new Random().nextInt(layouts.length)]);
         setScore(0, true);
@@ -106,30 +81,31 @@ public class QuizDieren1 extends AppCompatActivity {
         mp.start();
 
     }
-    public void addTarr(){
-list.clear();
-        list.add(  R.drawable.dieren01_egel);
-        list.add(  R.drawable.dieren01_ezel);//
-        list.add(  R.drawable.dieren01_geit);
-        list.add(  R.drawable.dieren01_hond);
-        list.add(  R.drawable.dieren01_jakhals);
-        list.add(  R.drawable.dieren01_kat);
-        list.add(  R.drawable.dieren01_kikker);
-        list.add(  R.drawable.dieren01_kip);
-        list.add(  R.drawable.dieren01_koe);
-        list.add(  R.drawable.dieren01_konijn);
-        list.add(  R.drawable.dieren01_muis);
-        list.add(  R.drawable.dieren01_paard);
-        list.add(  R.drawable.dieren01_schaap);
-        list.add(  R.drawable.dieren01_vis);
-        list.add(  R.drawable.dieren01_vogel);
+
+    public void addTarr() {
+        list.clear();
+        list.add(R.drawable.dieren01_egel);
+        list.add(R.drawable.dieren01_ezel);//
+        list.add(R.drawable.dieren01_geit);
+        list.add(R.drawable.dieren01_hond);
+        list.add(R.drawable.dieren01_jakhals);
+        list.add(R.drawable.dieren01_kat);
+        list.add(R.drawable.dieren01_kikker);
+        list.add(R.drawable.dieren01_kip);
+        list.add(R.drawable.dieren01_koe);
+        list.add(R.drawable.dieren01_konijn);
+        list.add(R.drawable.dieren01_muis);
+        list.add(R.drawable.dieren01_paard);
+        list.add(R.drawable.dieren01_schaap);
+        list.add(R.drawable.dieren01_vis);
+        list.add(R.drawable.dieren01_vogel);
         list.remove(quiznum);
 
     }
 
-    public void goedAntwoord(){
+    public void goedAntwoord() {
         setScore(2, false);
-        if(quiznum<vertaling.length-1) {
+        if (quiznum < vertaling.length - 1) {
             aantalfout = 0;
 
             quiznum++;
@@ -144,9 +120,8 @@ list.clear();
             amw.setText(vertaling[quiznum]);
 
 
-        }
-        else{
-            Intent intent = new Intent(QuizDieren1.this,klaar.class);
+        } else {
+            Intent intent = new Intent(QuizDieren1.this, klaar.class);
             intent.putExtra("extra_text", String.valueOf(this.score));
 
             startActivity(intent);
@@ -157,7 +132,7 @@ list.clear();
     }
 
 
-    public void setFout(int i, String k){
+    public void setFout(int i, String k) {
         switch (i) {
             case 1:
                 Button btn1 = (Button) findViewById(R.id.photo1); // amazich woor afgekoort met amw
@@ -184,21 +159,19 @@ list.clear();
                 break;
             case 6:
                 Button btn6 = (Button) findViewById(R.id.photo6); // amazich woor afgekoort met amw
-                shuffle();
                 btn6.setBackgroundResource(R.drawable.kruis);
 
 
+        }
+    }
 
-
-        }}
-
-    public void foutAntwoord(int i){
-        setFout(i,"#FF0000" );
+    public void foutAntwoord(int i) {
+        setFout(i, "#FF0000");
         setScore(-1, false);
     }
 
 
-    public void clickAntwoord(View v){
+    public void clickAntwoord(View v) {
         switch (v.getId()) {
             case R.id.photo1:
 
@@ -224,9 +197,9 @@ list.clear();
         aantalfout++;
 
 
-
     }
-    public void loadImg(){
+
+    public void loadImg() {
         Random rand = new Random();
 
         int n2;
@@ -237,10 +210,9 @@ list.clear();
         int n6;
 
 
-
         n2 = 1;
 
-        n3 =  2;
+        n3 = 2;
         n4 = 3;
 
         n5 = 4;
@@ -248,7 +220,6 @@ list.clear();
         n6 = 5;
 
 
-        RandomizeArray(photomix);
         Button btn1 = (Button) findViewById(R.id.photo1); // amazich woor afgekoort met amw
         btn1.setBackgroundResource(photos[quiznum]);
 
@@ -265,61 +236,15 @@ list.clear();
     }
 
 
+    public void setScore(int score, boolean aanpas) {
 
-
-
-    public static void RandomizeArray(int[] array){
-        Random rgen = new Random();  // Random number generator
-
-        if(array[1]==1){
-
-        }
-
-        for (int i=0; i<array.length; i++) {
-            int randomPosition = rgen.nextInt(array.length);
-            int temp = array[i];
-
-            array[i] = array[randomPosition];
-            array[randomPosition] = temp;
-        }
-
-    }
-    public void setScore(int score, boolean aanpas){
-
-        this.score=this.score+score;
+        this.score = this.score + score;
         TextView txt = (TextView) findViewById(R.id.score); // score view
-        if(aanpas) {
+        if (aanpas) {
 
             txt.setText("Score: " + String.valueOf(this.score));
         }
     }
-
-    public void shuffle(){
-        List<Integer> objects = new ArrayList<Integer>();
-        objects.add(0);
-        objects.add(1);
-        objects.add(2);
-        objects.add(3);
-        objects.add(4);
-
-        // Shuffle the collection
-        Collections.shuffle(objects);
-
-        List<Button> buttons = new ArrayList<Button>();
-        buttons.add((Button)findViewById(R.id.photo1));
-        buttons.add((Button)findViewById(R.id.photo2));
-        buttons.add((Button)findViewById(R.id.photo4));
-        buttons.add((Button)findViewById(R.id.photo5));
-        buttons.add((Button)findViewById(R.id.photo6));
-
-        for (int i = 0; i < objects.size(); i++) {
-            buttons.get(i).setText(objects.get(i).toString());
-        }
-
-
-
-    }
-
 
 
 }
