@@ -15,29 +15,41 @@ public class OefenKleding extends Activity
     int arrayNum;
     int aantalWoorden;
     private String[] woorden = {
-            "Egel", "Ezel", "Geit",
-            "Hond","Jakhals","Kat",
-            "Kikker", "Kip", "Koe",
-            "Konijn", "Muis", "Paard",
-            "Schaap", "Vis", "Vogel"
+            "broek", "trui", "onderhemd",
+            "jas","schoenen","laarzen",
+            "muts", "jurk", "rok",
+            "slippers", "handschoenen", "sokken",
+            "overhemd", "sjaal", "riem
     };
 
     private String[] vertaling = {
-            "Insi", "Aɣyul", "Tɣaṭṭ",
-            "Ayḍi","Uccen","Mucc",
-            "Aqaqriw", "Tyaziḍt", "Tafunast",
-            "Aqninni", "Aɣerda", "Ayis",
-            "Icerri", "Aslem", "Agḍiḍ"
+            "ssarwal", "amaryul", "camisita",
+            "aqabud","tisila","ihakusen",
+            "tcaccict", "tablust", "farda",
+            "tcinklat", "iwantisan", "tqacir",
+            "taqmijjat", "ahewwak", "abyas"
     };
 
     private int[] photos = {
-          R.drawable.dieren01_egel,R.drawable.dieren01_ezel, R.drawable.dieren01_geit,R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
-            R.drawable.dieren01_kikker, R.drawable.dieren01_kip, R.drawable.dieren01_koe, R.drawable.dieren01_konijn, R.drawable.dieren01_muis, R.drawable.dieren01_paard, R.drawable.dieren01_schaap, R.drawable.dieren01_vis, R.drawable.dieren01_vogel
+            R.drawable.kleding_broek, R.drawable.kleding_trui,
+            R.drawable.kleding_onderhemd, R.drawable.kleding_jas,
+            R.drawable.kleding_schoenen, R.drawable.kleding_laarzen,
+            R.drawable.kleding_muts, R.drawable.kleding_jurk,
+            R.drawable.kleding_rok, R.drawable.kleding_slippers,
+            R.drawable.kleding_handschoenen, R.drawable.kleding_sokken,
+            R.drawable.kleding_overhemd, R.drawable.kleding_sjaal,
+            R.drawable.kleding_riem
     };
 
     private int[] geluid = {
-            R.raw.dieren01_egel,R.raw.dieren01_ezel, R.raw.dieren01_geit,R.raw.dieren01_hond, R.raw.dieren01_jakhals, R.raw.dieren01_kat,
-            R.raw.dieren01_kikker, R.raw.dieren01_kip, R.raw.dieren01_koe, R.raw.dieren01_konijn, R.raw.dieren01_muis, R.raw.dieren01_paard, R.raw.dieren01_schaap, R.raw.dieren01_vis, R.raw.dieren01_vogel
+            R.raw.kleding_broek, R.raw.kleding_trui,
+            R.raw.kleding_onderhemd, R.raw.kleding_jas,
+            R.raw.kleding_schoenen, R.raw.kleding_laarzen,
+            R.raw.kleding_muts, R.raw.kleding_jurk,
+            R.raw.kleding_rok, R.raw.kleding_slippers,
+            R.raw.kleding_handschoenen, R.raw.kleding_sokken,
+            R.raw.kleding_overhemd, R.raw.kleding_sjaal,
+            R.raw.kleding_riem
     };
 
     @Override
