@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -24,12 +25,14 @@ import java.util.Set;
 
 public class QuizDieren1 extends AppCompatActivity {
 
-    private static int[] photomix;
     private int[] photos = {
             R.drawable.dieren01_egel,R.drawable.dieren01_ezel, R.drawable.dieren01_geit,R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
             R.drawable.dieren01_kikker, R.drawable.dieren01_kip, R.drawable.dieren01_koe, R.drawable.dieren01_konijn, R.drawable.dieren01_muis, R.drawable.dieren01_paard, R.drawable.dieren01_schaap, R.drawable.dieren01_vis, R.drawable.dieren01_vogel
     };
-
+    private int[] photomix = {
+            R.drawable.dieren01_egel,R.drawable.dieren01_ezel, R.drawable.dieren01_geit,R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
+            R.drawable.dieren01_kikker, R.drawable.dieren01_kip, R.drawable.dieren01_koe, R.drawable.dieren01_konijn, R.drawable.dieren01_muis, R.drawable.dieren01_paard, R.drawable.dieren01_schaap, R.drawable.dieren01_vis, R.drawable.dieren01_vogel
+    };
     private String[] vertaling = {
             "Insi", "Aɣyul", "Tɣaṭṭ",
             "Ayḍi","Uccen","Mucc",
@@ -37,6 +40,11 @@ public class QuizDieren1 extends AppCompatActivity {
             "Aqninni", "Aɣerda", "Ayis",
             "Icerri", "Aslem", "Agḍiḍ"
     };
+    private int[] geluid = {
+            R.raw.dieren01_egel,R.raw.dieren01_ezel, R.raw.dieren01_geit,R.raw.dieren01_hond, R.raw.dieren01_jakhals, R.raw.dieren01_kat,
+            R.raw.dieren01_kikker, R.raw.dieren01_kip, R.raw.dieren01_koe, R.raw.dieren01_konijn, R.raw.dieren01_muis, R.raw.dieren01_paard, R.raw.dieren01_schaap, R.raw.dieren01_vis, R.raw.dieren01_vogel
+    };
+
 
     int quiznum;
     int aantalfout;
@@ -70,7 +78,8 @@ public class QuizDieren1 extends AppCompatActivity {
 
         setContentView(layouts[new Random().nextInt(layouts.length)]);
         setScore(0, true);
-
+        final MediaPlayer mp = MediaPlayer.create(this, geluid[quiznum]);
+        mp.start();
 
     }
 
@@ -78,8 +87,10 @@ public class QuizDieren1 extends AppCompatActivity {
         setScore(2, false);
         if(quiznum<vertaling.length-1) {
             aantalfout = 0;
-            antPosition();
+
             quiznum++;
+            antPosition();
+            loadImg();
 
             TextView amw = (TextView) findViewById(R.id.amazighwoord); // amazich woor afgekoort met amw
 
@@ -87,7 +98,6 @@ public class QuizDieren1 extends AppCompatActivity {
             amw.setText(vertaling[quiznum]);
 
 
-            loadImg();
         }
         else{
             Intent intent = new Intent(QuizDieren1.this,klaar.class);
@@ -142,71 +152,71 @@ public class QuizDieren1 extends AppCompatActivity {
     }
 
 
-                public void clickAntwoord(View v){
-                        switch (v.getId()) {
-                            case R.id.photo1:
+    public void clickAntwoord(View v){
+        switch (v.getId()) {
+            case R.id.photo1:
 
-                                goedAntwoord();
-                                //setKleur(1,"#FFA477");
-                                break;
-                            case R.id.photo2:
-                                foutAntwoord(2);
-                                break;
-                            case R.id.photo3:
-                                foutAntwoord(3);
-                                break;
-                            case R.id.photo4:
-                                foutAntwoord(4);
-                                break;
-                            case R.id.photo5:
-                                foutAntwoord(5);
-                                break;
-                            case R.id.photo6:
-                                foutAntwoord(6);
-                                break;
-                        }
-                        aantalfout++;
+                goedAntwoord();
+                //setKleur(1,"#FFA477");
+                break;
+            case R.id.photo2:
+                foutAntwoord(2);
+                break;
+            case R.id.photo3:
+                foutAntwoord(3);
+                break;
+            case R.id.photo4:
+                foutAntwoord(4);
+                break;
+            case R.id.photo5:
+                foutAntwoord(5);
+                break;
+            case R.id.photo6:
+                foutAntwoord(6);
+                break;
+        }
+        aantalfout++;
 
 
 
     }
-        public void loadImg(){
-            Random rand = new Random();
+    public void loadImg(){
+        Random rand = new Random();
 
-            int n2;
-            int n3;
-            int n4;
+        int n2;
+        int n3;
+        int n4;
 
-            int n5;
-            int n6;
-
-
-
-                 n2 = 1;
-
-                 n3 =  2;
-                 n4 = 3;
-
-                 n5 = 4;
-
-                 n6 = 5;
+        int n5;
+        int n6;
 
 
-RandomizeArray(photos);
-            Button btn1 = (Button) findViewById(R.id.photo1); // amazich woor afgekoort met amw
-            btn1.setBackgroundResource(photos[quiznum]);
 
-            Button btn2 = (Button) findViewById(R.id.photo2); // amazich woor afgekoort met amw
-            btn2.setBackgroundResource(photomix[2]);
-            Button btn3 = (Button) findViewById(R.id.photo3); // amazich woor afgekoort met amw
-            btn3.setBackgroundResource(photomix[3]);
-            Button btn4 = (Button) findViewById(R.id.photo4); // amazich woor afgekoort met amw
-            btn4.setBackgroundResource(photomix[5]);
-            Button btn5 = (Button) findViewById(R.id.photo5); // amazich woor afgekoort met amw
-            btn5.setBackgroundResource(photomix[6]);
-            Button btn6 = (Button) findViewById(R.id.photo6); // amazich woor afgekoort met amw
-            btn6.setBackgroundResource(photos[7]);
-        }
+        n2 = 1;
+
+        n3 =  2;
+        n4 = 3;
+
+        n5 = 4;
+
+        n6 = 5;
+
+
+        RandomizeArray(photomix);
+        Button btn1 = (Button) findViewById(R.id.photo1); // amazich woor afgekoort met amw
+        btn1.setBackgroundResource(photos[quiznum]);
+
+        Button btn2 = (Button) findViewById(R.id.photo2); // amazich woor afgekoort met amw
+        btn2.setBackgroundResource(photomix[2]);
+        Button btn3 = (Button) findViewById(R.id.photo3); // amazich woor afgekoort met amw
+        btn3.setBackgroundResource(photomix[3]);
+        Button btn4 = (Button) findViewById(R.id.photo4); // amazich woor afgekoort met amw
+        btn4.setBackgroundResource(photomix[5]);
+        Button btn5 = (Button) findViewById(R.id.photo5); // amazich woor afgekoort met amw
+        btn5.setBackgroundResource(photomix[6]);
+        Button btn6 = (Button) findViewById(R.id.photo6); // amazich woor afgekoort met amw
+        btn6.setBackgroundResource(photomix[7]);
+    }
 
 
 
@@ -215,9 +225,9 @@ RandomizeArray(photos);
     public static void RandomizeArray(int[] array){
         Random rgen = new Random();  // Random number generator
 
-            if(array[1]==1){
+        if(array[1]==1){
 
-            }
+        }
 
         for (int i=0; i<array.length; i++) {
             int randomPosition = rgen.nextInt(array.length);
@@ -227,7 +237,6 @@ RandomizeArray(photos);
             array[randomPosition] = temp;
         }
 
-        photomix= array;
     }
     public void setScore(int score, boolean aanpas){
 

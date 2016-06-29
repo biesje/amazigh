@@ -2,6 +2,7 @@ package com.example.timbiezeveld.amazighproj;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -15,7 +16,6 @@ import java.util.Random;
 
 public class QuizDieren2 extends AppCompatActivity {
 
-    private static int[] photomix;
 
 
     private String[] vertaling = {
@@ -28,6 +28,16 @@ public class QuizDieren2 extends AppCompatActivity {
     };
 
     private int[] photos = {
+            R.drawable.dieren02_duif, R.drawable.dieren02_gekko,
+            R.drawable.dieren02_haas, R.drawable.dieren02_hyena,
+            R.drawable.dieren02_kameleon, R.drawable.dieren02_patrijs,
+            R.drawable.dieren02_schildpad, R.drawable.dieren02_schorpioen,
+            R.drawable.dieren02_slang, R.drawable.dieren02_stekelvarken,
+            R.drawable.dieren02_uil, R.drawable.dieren02_vos,
+            R.drawable.dieren02_wildzwijn, R.drawable.dieren02_windhond,
+            R.drawable.dieren02_zwaluw
+    };
+    private int[] photomix = {
             R.drawable.dieren02_duif, R.drawable.dieren02_gekko,
             R.drawable.dieren02_haas, R.drawable.dieren02_hyena,
             R.drawable.dieren02_kameleon, R.drawable.dieren02_patrijs,
@@ -81,7 +91,8 @@ public class QuizDieren2 extends AppCompatActivity {
 
         setContentView(layouts[new Random().nextInt(layouts.length)]);
         setScore(0, true);
-
+        final MediaPlayer mp = MediaPlayer.create(this, geluid[quiznum]);
+        mp.start();
 
     }
 
@@ -89,8 +100,8 @@ public class QuizDieren2 extends AppCompatActivity {
         setScore(2, false);
         if(quiznum<vertaling.length-1) {
             aantalfout = 0;
-            antPosition();
             quiznum++;
+            antPosition();
 
             TextView amw = (TextView) findViewById(R.id.amazighwoord); // amazich woor afgekoort met amw
 
@@ -203,7 +214,7 @@ public class QuizDieren2 extends AppCompatActivity {
         n6 = 5;
 
 
-        RandomizeArray(photos);
+        RandomizeArray(photomix);
         Button btn1 = (Button) findViewById(R.id.photo1); // amazich woor afgekoort met amw
         btn1.setBackgroundResource(photos[quiznum]);
 
@@ -216,8 +227,10 @@ public class QuizDieren2 extends AppCompatActivity {
         Button btn5 = (Button) findViewById(R.id.photo5); // amazich woor afgekoort met amw
         btn5.setBackgroundResource(photomix[6]);
         Button btn6 = (Button) findViewById(R.id.photo6); // amazich woor afgekoort met amw
-        btn6.setBackgroundResource(photos[7]);
+        btn6.setBackgroundResource(photomix[7]);
     }
+
+
 
 
 
@@ -238,7 +251,6 @@ public class QuizDieren2 extends AppCompatActivity {
             array[randomPosition] = temp;
         }
 
-        photomix= array;
     }
     public void setScore(int score, boolean aanpas){
 
