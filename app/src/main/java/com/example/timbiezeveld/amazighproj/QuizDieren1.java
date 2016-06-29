@@ -24,11 +24,16 @@ import java.util.Random;
 import java.util.Set;
 
 public class QuizDieren1 extends AppCompatActivity {
+    ArrayList<Integer> list = new ArrayList<Integer>();
+    ArrayList<Integer> mixlist = new ArrayList<Integer>();
+
 
     private int[] photos = {
             R.drawable.dieren01_egel,R.drawable.dieren01_ezel, R.drawable.dieren01_geit,R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
             R.drawable.dieren01_kikker, R.drawable.dieren01_kip, R.drawable.dieren01_koe, R.drawable.dieren01_konijn, R.drawable.dieren01_muis, R.drawable.dieren01_paard, R.drawable.dieren01_schaap, R.drawable.dieren01_vis, R.drawable.dieren01_vogel
     };
+
+
     private int[] photomix = {
             R.drawable.dieren01_egel,R.drawable.dieren01_ezel, R.drawable.dieren01_geit,R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
             R.drawable.dieren01_kikker, R.drawable.dieren01_kip, R.drawable.dieren01_koe, R.drawable.dieren01_konijn, R.drawable.dieren01_muis, R.drawable.dieren01_paard, R.drawable.dieren01_schaap, R.drawable.dieren01_vis, R.drawable.dieren01_vogel
@@ -54,14 +59,33 @@ public class QuizDieren1 extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        antPosition();
+        addTarr();
+
         quiznum = 0;
         score = 0;
+
+
+        antPosition();
+
+        loadImg();
         TextView amw = (TextView) findViewById(R.id.amazighwoord); // amazich woor afgekoort met amw
 
 
         amw.setText(vertaling[quiznum]);
-        loadImg();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -82,6 +106,26 @@ public class QuizDieren1 extends AppCompatActivity {
         mp.start();
 
     }
+    public void addTarr(){
+list.clear();
+        list.add(  R.drawable.dieren01_egel);
+        list.add(  R.drawable.dieren01_ezel);//
+        list.add(  R.drawable.dieren01_geit);
+        list.add(  R.drawable.dieren01_hond);
+        list.add(  R.drawable.dieren01_jakhals);
+        list.add(  R.drawable.dieren01_kat);
+        list.add(  R.drawable.dieren01_kikker);
+        list.add(  R.drawable.dieren01_kip);
+        list.add(  R.drawable.dieren01_koe);
+        list.add(  R.drawable.dieren01_konijn);
+        list.add(  R.drawable.dieren01_muis);
+        list.add(  R.drawable.dieren01_paard);
+        list.add(  R.drawable.dieren01_schaap);
+        list.add(  R.drawable.dieren01_vis);
+        list.add(  R.drawable.dieren01_vogel);
+        list.remove(quiznum);
+
+    }
 
     public void goedAntwoord(){
         setScore(2, false);
@@ -89,6 +133,8 @@ public class QuizDieren1 extends AppCompatActivity {
             aantalfout = 0;
 
             quiznum++;
+            addTarr();
+
             antPosition();
             loadImg();
 
@@ -124,7 +170,7 @@ public class QuizDieren1 extends AppCompatActivity {
 
                 break;
             case 3:
-                Button btn3 = (Button) findViewById(R.id.photo3); // amazich woor afgekoort met amw
+                Button btn3 = (Button) findViewById(R.id.photo2); // amazich woor afgekoort met amw
 
                 btn3.setBackgroundResource(R.drawable.kruis);
                 break;
@@ -207,15 +253,15 @@ public class QuizDieren1 extends AppCompatActivity {
         btn1.setBackgroundResource(photos[quiznum]);
 
         Button btn2 = (Button) findViewById(R.id.photo2); // amazich woor afgekoort met amw
-        btn2.setBackgroundResource(photomix[2]);
+        btn2.setBackgroundResource(list.get(0));
         Button btn3 = (Button) findViewById(R.id.photo3); // amazich woor afgekoort met amw
-        btn3.setBackgroundResource(photomix[3]);
+        btn3.setBackgroundResource(list.get(1));
         Button btn4 = (Button) findViewById(R.id.photo4); // amazich woor afgekoort met amw
-        btn4.setBackgroundResource(photomix[5]);
+        btn4.setBackgroundResource(list.get(2));
         Button btn5 = (Button) findViewById(R.id.photo5); // amazich woor afgekoort met amw
-        btn5.setBackgroundResource(photomix[6]);
+        btn5.setBackgroundResource(list.get(3));
         Button btn6 = (Button) findViewById(R.id.photo6); // amazich woor afgekoort met amw
-        btn6.setBackgroundResource(photomix[7]);
+        btn6.setBackgroundResource(list.get(4));
     }
 
 

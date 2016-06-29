@@ -16,7 +16,6 @@ import java.util.Random;
 
 public class QuizInsecten extends AppCompatActivity {
 
-    private static int[] photomix;
 
 
     private String[] vertaling = {
@@ -27,7 +26,16 @@ public class QuizInsecten extends AppCompatActivity {
             "buccel ", "tiḍḍa", "tamraebt"
 
     };
-
+    private int[] photomix = {
+            R.drawable.insecten_slak, R.drawable.insecten_regenworm,
+            R.drawable.insecten_larve, R.drawable.insecten_vlieg,
+            R.drawable.insecten_bij, R.drawable.insecten_mug,
+            R.drawable.insecten_mier, R.drawable.insecten_vlinder,
+            R.drawable.insecten_spin, R.drawable.insecten_sprinkhaan,
+            R.drawable.insecten_rups, R.drawable.insecten_wesp,
+            R.drawable.insecten_naaktslak, R.drawable.insecten_bloedzuiger,
+            R.drawable.insecten_bidsprinkhaan
+    };
     private int[] photos = {
             R.drawable.insecten_slak, R.drawable.insecten_regenworm,
             R.drawable.insecten_larve, R.drawable.insecten_vlieg,
@@ -241,7 +249,6 @@ public class QuizInsecten extends AppCompatActivity {
             array[randomPosition] = temp;
         }
 
-        photomix= array;
     }
     public void setScore(int score, boolean aanpas){
 
