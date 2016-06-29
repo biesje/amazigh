@@ -22,11 +22,33 @@ public class QuizKleding extends AppCompatActivity {
     };
 
     private String[] vertaling = {
-            "Insi", "Aɣyul", "Tɣaṭṭ",
-            "Ayḍi","Uccen","Mucc",
-            "Aqaqriw", "Tyaziḍt", "Tafunast",
-            "Aqninni", "Aɣerda", "Ayis",
-            "Icerri", "Aslem", "Agḍiḍ"
+            "ssarwal", "amaryul", "camisita",
+            "aqabud","tisila","ihakusen",
+            "tcaccict", "tablust", "farda",
+            "tcinklat", "iwantisan", "tqacir",
+            "taqmijjat", "ahewwak", "abyas"
+    };
+
+    private int[] photos = {
+            R.drawable.kleding_broek, R.drawable.kleding_trui,
+            R.drawable.kleding_onderhemd, R.drawable.kleding_jas,
+            R.drawable.kleding_schoenen, R.drawable.kleding_laarzen,
+            R.drawable.kleding_muts, R.drawable.kleding_jurk,
+            R.drawable.kleding_rok, R.drawable.kleding_slippers,
+            R.drawable.kleding_handschoenen, R.drawable.kleding_sokken,
+            R.drawable.kleding_overhemd, R.drawable.kleding_sjaal,
+            R.drawable.kleding_riem
+    };
+
+    private int[] geluid = {
+            R.raw.kleding_broek, R.raw.kleding_trui,
+            R.raw.kleding_onderhemd, R.raw.kleding_jas,
+            R.raw.kleding_schoenen, R.raw.kleding_laarzen,
+            R.raw.kleding_muts, R.raw.kleding_jurk,
+            R.raw.kleding_rok, R.raw.kleding_slippers,
+            R.raw.kleding_handschoenen, R.raw.kleding_sokken,
+            R.raw.kleding_overhemd, R.raw.kleding_sjaal,
+            R.raw.kleding_riem
     };
 
     int quiznum;

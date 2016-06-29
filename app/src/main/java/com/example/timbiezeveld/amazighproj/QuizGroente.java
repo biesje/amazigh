@@ -16,18 +16,33 @@ import java.util.Random;
 public class QuizGroente extends AppCompatActivity {
 
     private static int[] photomix;
-    private int[] photos = {
-            R.drawable.dieren01_egel,R.drawable.dieren01_ezel, R.drawable.dieren01_geit,R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
-            R.drawable.dieren01_kikker, R.drawable.dieren01_kip, R.drawable.dieren01_koe, R.drawable.dieren01_konijn, R.drawable.dieren01_muis, R.drawable.dieren01_paard, R.drawable.dieren01_schaap, R.drawable.dieren01_vis, R.drawable.dieren01_vogel
+    private String[] vertaling = {
+        "rḥimez", "leɛdes", "llubeyyet",
+            "ttumatic","zzitun","baṭaṭa",
+            "rebser", "ticcart", "dra",
+            "rferfer", "taxsact", "xizzu",
+"tinifin", "ibawen", "ṭebi"
     };
 
-    private String[] vertaling = {
-            "Insi", "Aɣyul", "Tɣaṭṭ",
-            "Ayḍi","Uccen","Mucc",
-            "Aqaqriw", "Tyaziḍt", "Tafunast",
-            "Aqninni", "Aɣerda", "Ayis",
-            "Icerri", "Aslem", "Agḍiḍ"
-    };
+    private int[] photos = {
+ R.drawable.groente_kikkererwten, R.drawable.groente_linzen,
+            R.drawable.groente_bonen, R.drawable.groente_tomaat,
+            R.drawable.groente_olijven, R.drawable.groente_aardappel,
+            R.drawable.groente_ui, R.drawable.groente_knoflook,
+            R.drawable.groente_mais, R.drawable.groente_paprika,
+            R.drawable.groente_pompoen, R.drawable.groente_wortel,
+            R.drawable.groente_doperwten, R.drawable.groente_tuinbonen,
+R.drawable.groente_spinazie    };
+
+    private int[] geluid = {
+ R.raw.groente_kikkererwten, R.raw.groente_linzen,
+            R.raw.groente_bonen, R.raw.groente_tomaat,
+            R.raw.groente_olijven, R.raw.groente_aardappel,
+            R.raw.groente_ui, R.raw.groente_knoflook,
+            R.raw.groente_mais, R.raw.groente_paprika,
+            R.raw.groente_pompoen, R.raw.groente_wortel,
+            R.raw.groente_doperwten, R.raw.groente_tuinbonen,
+R.raw.groente_spinazie    };
 
     int quiznum;
     int aantalfout;

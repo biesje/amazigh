@@ -16,18 +16,29 @@ import java.util.Random;
 public class QuizKleur extends AppCompatActivity {
 
     private static int[] photomix;
-    private int[] photos = {
-            R.drawable.dieren01_egel,R.drawable.dieren01_ezel, R.drawable.dieren01_geit,R.drawable.dieren01_hond, R.drawable.dieren01_jakhals, R.drawable.dieren01_kat,
-            R.drawable.dieren01_kikker, R.drawable.dieren01_kip, R.drawable.dieren01_koe, R.drawable.dieren01_konijn, R.drawable.dieren01_muis, R.drawable.dieren01_paard, R.drawable.dieren01_schaap, R.drawable.dieren01_vis, R.drawable.dieren01_vogel
+    private String[] vertaling = {
+            "azegg-aɣ", "awraɣ", "aḥmaymi",
+            "abarcan","acemlal","ahemruni",
+            "aziza", "aletcini", "akarkac",
+            "azbaybi"
     };
 
-    private String[] vertaling = {
-            "Insi", "Aɣyul", "Tɣaṭṭ",
-            "Ayḍi","Uccen","Mucc",
-            "Aqaqriw", "Tyaziḍt", "Tafunast",
-            "Aqninni", "Aɣerda", "Ayis",
-            "Icerri", "Aslem", "Agḍiḍ"
+    private int[] photos = {
+            R.drawable.kleuren_rood, R.drawable.kleuren_geel,
+            R.drawable.kleuren_blauw, R.drawable.kleuren_zwart,
+            R.drawable.kleuren_wit, R.drawable.kleuren_bruin,
+            R.drawable.kleuren_groen, R.drawable.kleuren_oranje,
+            R.drawable.kleuren_bont, R.drawable.kleuren_paars
     };
+
+    private int[] geluid = {
+            R.raw.kleuren_rood, R.raw.kleuren_geel,
+            R.raw.kleuren_blauw, R.raw.kleuren_zwart,
+            R.raw.kleuren_wit, R.raw.kleuren_bruin,
+            R.raw.kleuren_groen, R.raw.kleuren_oranje,
+            R.raw.kleuren_bont, R.raw.kleuren_paars
+    };
+
 
     int quiznum;
     int aantalfout;
